@@ -15,6 +15,8 @@ Shield modes
 """
 import argparse
 import json
+
+import numpy as np
 import os
 import random
 import re
@@ -22,7 +24,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from common import RESULTS, ROOT, load  # noqa: E402
-from gemini import BULK, call_raw, generate, pmap  # noqa: E402
+from gemini import BULK, JUDGE, call_raw, generate, pmap  # noqa: E402
 
 AGENT = os.environ.get("AGENT_MODEL", BULK)
 
@@ -62,7 +64,6 @@ def cases(rng):
 
 
 def cmd_score(args):
-    import numpy as np  # noqa: F401
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
     from common import device, score_texts
     path = os.path.join(ROOT, args.model)
@@ -70,18 +71,36 @@ def cmd_score(args):
     model = AutoModelForSequenceClassification.from_pretrained(path).to(device())
     cs = cases(random.Random(0))
     full = score_texts(model, tok, [c["tool_response"] for c in cs])
-    segs = [segments(c["tool_response"]) for c in cs]
-    flat = [s for ss in segs for s in ss]
-    flat_scores = score_texts(model, tok, [s if s.strip() else "." for s in flat])
-    k = 0
-    for c, ss, fs in zip(cs, segs, full):
+    thr = json.load(open(os.path.join(path, "thresholds.json")))
+    for c, fs in zip(cs, full):
         c["score_full"] = float(fs)
-        c["segments"] = [(s, float(flat_scores[k + i])) for i, s in enumerate(ss)]
-        k += len(ss)
-    thr = json.load(open(os.path.join(path, "train_info.json")))["thresholds"]
+        c["redacted"] = {name: occlusion_redact(model, tok, c["tool_response"], t, float(fs))
+                         for name, t in thr.items()}
     os.makedirs(OUT, exist_ok=True)
     json.dump({"model": args.model, "thresholds": thr, "cases": cs}, open(os.path.join(OUT, "cases.json"), "w"))
     print("scored", len(cs), "cases")
+
+
+def occlusion_redact(model, tok, text, thr, score, max_iter=4):
+    """Greedy in-context redaction: repeatedly blank the segment whose removal lowers the WHOLE-document score
+    the most, until the document scores below thr. (Scoring isolated segments is out of distribution for the
+    window classifier: short fragments score high on their own, see README.)"""
+    from common import score_texts
+    segs = segments(text)
+    removed = []
+    while score >= thr and len(removed) < max_iter:
+        cand = [i for i, sg in enumerate(segs) if sg.strip() and i not in removed and sg != REDACT_NOTICE]
+        if not cand:
+            break
+        variants = ["".join(REDACT_NOTICE if j == i else sg for j, sg in enumerate(segs)) for i in cand]
+        sc = score_texts(model, tok, variants)
+        best = int(np.argmin(sc))
+        if sc[best] >= score - 1e-4:
+            break
+        segs[cand[best]] = REDACT_NOTICE
+        removed.append(cand[best])
+        score = float(sc[best])
+    return {"text": "".join(segs), "n_removed": len(removed), "final_score": score}
 
 
 TOOLS = None
@@ -114,19 +133,14 @@ def tool_decls(names):
     return decls
 
 
-def shielded(c, mode, thr):
+def shielded(c, mode, thr, thr_name):
     if mode == "none":
         return c["tool_response"], False
     if mode == "block":
         return (BLOCK_NOTICE, True) if c["score_full"] >= thr else (c["tool_response"], False)
-    out, hit = [], False
-    for s, sc in c["segments"]:
-        if sc >= thr and s.strip():
-            out.append(REDACT_NOTICE)
-            hit = True
-        else:
-            out.append(s)
-    return "".join(out), hit
+    if c["score_full"] < thr:
+        return c["tool_response"], False
+    return c["redacted"][thr_name]["text"], True
 
 
 def agent_step(c, tool_output):
@@ -173,27 +187,26 @@ def judge_utility(batch):
     body = "\n\n".join(f"<case id={i}>\nUSER REQUEST: {b['user']}\nTOOL OUTPUT (original): {b['tool_response'][:3000]}"
                        f"\nASSISTANT REPLY: {b['reply'][:3000] or '(no text; tool calls: ' + str(b['calls']) + ')'}"
                        f"\n</case>" for i, b in enumerate(batch))
-    out = json.loads(generate(UTIL_PROMPT.format(cases=body), temperature=0.0, json_mode=True, seed=0))
+    out = json.loads(generate(UTIL_PROMPT.format(cases=body), model=JUDGE, temperature=0.0, json_mode=True, seed=0))
     got = {int(x["id"]): bool(x["fulfilled"]) for x in out["results"]}
     return [got.get(i) for i in range(len(batch))]
 
 
 def cmd_run(args):
-    import numpy as np
     d = json.load(open(os.path.join(OUT, "cases.json")))
     thr = d["thresholds"][args.threshold]
     tool_decls([])
     runs = []
     for mode in ["none", "block", "redact"]:
         for i, c in enumerate(d["cases"]):
-            out, hit = shielded(c, mode, thr)
+            out, hit = shielded(c, mode, thr, args.threshold)
             runs.append({"mode": mode, "i": i, "tool_output": out, "shield_hit": hit})
     # identical (case, tool_output) pairs share one API call
     uniq = {}
     for r in runs:
         uniq.setdefault((r["i"], r["tool_output"]), None)
     keys = list(uniq)
-    res = pmap(lambda k: agent_step(d["cases"][k[0]], k[1]), keys, desc="agent")
+    res = pmap(lambda k: agent_step(d["cases"][k[0]], k[1]), keys, desc="agent", workers=int(os.environ.get("AGENT_WORKERS", 4)))
     for k, v in zip(keys, res):
         uniq[k] = v
     n_err = 0
@@ -212,7 +225,7 @@ def cmd_run(args):
     jb = [dict(user=d["cases"][r["i"]]["user"], tool_response=d["cases"][r["i"]]["tool_response"],
                reply=r["reply"], calls=r["calls"]) for r in ben + att]
     batches = [jb[i:i + 8] for i in range(0, len(jb), 8)]
-    jr = pmap(judge_utility, batches, desc="utility-judge")
+    jr = pmap(judge_utility, batches, desc="utility-judge", workers=int(os.environ.get("AGENT_WORKERS", 4)))
     flat = []
     for b, o in zip(batches, jr):
         flat += [None] * len(b) if isinstance(o, Exception) else o
@@ -225,7 +238,7 @@ def cmd_run(args):
         se = float(np.sqrt(p * (1 - p) / len(v))) if v else float("nan")
         return {"rate": p, "ci95": [p - 1.96 * se, p + 1.96 * se], "n": len(v)}
 
-    summary = {"threshold": args.threshold, "threshold_value": thr, "model": d["model"], "agent": AGENT,
+    summary = {"threshold": args.threshold, "threshold_value": thr, "model": d["model"], "agent": AGENT, "utility_judge": JUDGE,
                "modes": {}}
     for mode in ["none", "block", "redact"]:
         a = [r for r in att if r["mode"] == mode]

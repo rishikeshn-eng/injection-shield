@@ -124,24 +124,47 @@ function windows(text) {
 
 function segments(text) { return text.split(/((?<=[.!?])\s+|\n+|', '|", ")/).filter((s) => s); }
 
+async function docScore(text) {
+  const ws = windows(text), wp = [];
+  for (let i = 0; i < ws.length; i += 8) wp.push(...await probs(ws.slice(i, i + 8)));
+  return { p: Math.max(...wp), n: ws.length };
+}
+
+// In-context occlusion: blank the segment whose removal lowers the whole-document score most, repeat until the
+// document is below threshold. (Scoring sentences in isolation is out of distribution for this model.)
+async function occlude(segs, p, t, maxIter = 4) {
+  segs = segs.slice(); const removed = new Set();
+  let units = segs.map((s, i) => i).filter((i) => segs[i].trim().length > 2);
+  if (units.length > 60) units = units.filter((_, k) => k % Math.ceil(units.length / 60) === 0);
+  while (p >= t && removed.size < maxIter) {
+    const cand = units.filter((i) => !removed.has(i)); if (!cand.length) break;
+    let best = -1, bestP = p;
+    for (const i of cand) { const v = segs.map((s, j) => j === i ? " " : s).join(""); const q = (await docScore(v)).p; if (q < bestP) { bestP = q; best = i; } }
+    if (best < 0 || bestP >= p - 1e-4) break;
+    removed.add(best); segs[best] = " "; p = bestP;
+  }
+  return removed;
+}
+
 async function score() {
   const text = $("inp").value; if (!text.trim()) return;
   $("go").disabled = true; $("status").textContent = "Scoring…";
   const t0 = performance.now();
-  const ws = windows(text);
-  const wp = []; for (let i = 0; i < ws.length; i += 8) wp.push(...await probs(ws.slice(i, i + 8)));
-  const p = Math.max(...wp);
-  const segs = segments(text), idx = segs.map((s, i) => s.trim().length > 3 ? i : -1).filter((i) => i >= 0);
-  const sp = new Array(segs.length).fill(0);
-  for (let i = 0; i < idx.length; i += 16) { const b = idx.slice(i, i + 16); const r = await probs(b.map((j) => segs[j])); b.forEach((j, q) => sp[j] = r[q]); }
+  const { p, n } = await docScore(text);
+  const ws = { length: n };
+  const segs = segments(text);
   const flagged = p >= thr.fpr1;
+  if (flagged) $("status").textContent = "Locating the injected span…";
+  const removed = flagged ? await occlude(segs, p, thr.fpr1) : new Set();
+  const sp = segs.map((_, i) => removed.has(i) ? 1 : 0);
   $("out").hidden = false;
   $("verdict").textContent = (flagged ? "Likely prompt injection" : p >= 0.5 ? "Suspicious" : "No injection detected") + ` — score ${p.toFixed(3)}`;
   $("verdict").style.color = flagged ? "var(--bad)" : p >= 0.5 ? "var(--warn)" : "var(--good)";
   $("bar").style.width = (100 * p).toFixed(1) + "%"; $("bar").style.background = $("verdict").style.color;
-  $("detail").textContent = `${ws.length} window(s), ${(performance.now() - t0).toFixed(0)} ms. Flag threshold ${thr.fpr1.toFixed(3)} (1% FPR on validation). Highlighted: segments that score above it on their own.`;
+  $("detail").textContent = `${ws.length} window(s), ${(performance.now() - t0).toFixed(0)} ms. Flag threshold ${thr.fpr1.toFixed(3)} (1% FPR on validation).` +
+    (flagged ? ` Highlighted: the fewest segments whose removal brings the document below the threshold (in-context occlusion).` : "");
   $("segs").replaceChildren(...segs.map((s, i) => { const e = document.createElement("span"); e.textContent = s;
-    if (sp[i] >= thr.fpr1) { e.className = "flag"; e.title = "segment score " + sp[i].toFixed(3); } return e; }));
+    if (sp[i]) { e.className = "flag"; e.title = "removing this segment lowers the document score"; } return e; }));
   $("status").textContent = "Done."; $("go").disabled = false;
 }
 

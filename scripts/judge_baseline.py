@@ -63,7 +63,7 @@ def main():
             continue
         rows = sample(split, rng)
         batches = [rows[i:i + BATCH] for i in range(0, len(rows), BATCH)]
-        outs = pmap(judge_batch, batches, desc=f"judge {split}")
+        outs = pmap(judge_batch, batches, desc=f"judge {split}", workers=int(os.environ.get("JUDGE_WORKERS", 4)))
         scores = []
         for b, o in zip(batches, outs):
             scores += [float("nan")] * len(b) if isinstance(o, Exception) else o
@@ -79,7 +79,7 @@ def main():
         m = res["splits"][split]
         print(f"{split:26s} n={m['n']} failed={m['n_failed']} auroc={m['auroc']:.3f} "
               f"R={m['t0.5']['recall']:.3f} FPR={m['t0.5']['fpr']:.3f}", flush=True)
-    json.dump(res, open(os.path.join(RESULTS, "metrics", "gemini-judge.json"), "w"), indent=1)
+    json.dump(res, open(os.path.join(RESULTS, "metrics", "llm-judge.json"), "w"), indent=1)
 
 
 if __name__ == "__main__":

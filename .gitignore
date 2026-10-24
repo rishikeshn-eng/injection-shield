@@ -9,3 +9,7 @@ __pycache__/
 *.pyc
 .DS_Store
 node_modules/
+results/judge_subsample/
+results/agent/cases.json
+results/agent/runs_*.jsonl
+.metadata_never_index

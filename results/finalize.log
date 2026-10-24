@@ -1,0 +1,231 @@
+1130 jobs, model gemini-3.5-flash-lite
+[synth] 50/1130 0s
+[synth] 100/1130 0s
+[synth] 150/1130 0s
+[synth] 200/1130 0s
+[synth] 250/1130 0s
+[synth] 300/1130 0s
+[synth] 350/1130 0s
+[synth] 400/1130 0s
+[synth] 450/1130 0s
+[synth] 500/1130 0s
+[synth] 550/1130 0s
+[synth] 600/1130 0s
+[synth] 650/1130 0s
+[synth] 700/1130 0s
+[synth] 750/1130 0s
+[synth] 800/1130 0s
+[synth] 850/1130 0s
+[synth] 900/1130 0s
+[synth] 950/1130 0s
+[synth] 1000/1130 0s
+[synth] 1050/1130 0s
+[synth] 1100/1130 0s
+[synth] 1130/1130 0s
+pairs=3736 benign=730 failed_calls=379 rejected_items=14
+salvaged pairs 360 benign 0
+test_bipia                   n=   712 pos=   534 neg=   178  {'bipia_table': 336, 'bipia_code': 200, 'bipia_email': 176}
+test_hardneg                 n=   262 pos=     0 neg=   262  {'synth_hardneg': 262}
+test_promptshield            n=  3987 pos=  1104 neg=  2883  {'promptshield': 3987}
+test_public                  n=  3245 pos=  1530 neg=  1715  {'safeguard': 2048, 'mosscap': 398, 'jackhhao': 372, 'tensortrust': 186, 'deepset': 116, 'gandalf_ignore_instructions': 112}
+test_synth_id                n=   552 pos=   276 neg=   276  {'synth': 552}
+test_synth_ood_both          n=   288 pos=   144 neg=   144  {'synth': 288}
+test_synth_ood_carrier       n=  1142 pos=   571 neg=   571  {'synth': 1142}
+test_synth_ood_style         n=  1338 pos=   669 neg=   669  {'synth': 1338}
+train                        n= 24497 pos= 12166 neg= 12331  {'safeguard': 7511, 'promptshield': 5646, 'synth': 4308, 'mosscap': 2317, 'jackhhao': 1115, 'gandalf_ignore_instructions': 726}
+val                          n=  2383 pos=  1495 neg=   888  {'synth': 564, 'mosscap': 560, 'safeguard': 466, 'promptshield': 354, 'gandalf_ignore_instructions': 161, 'jackhhao': 62}
+ext_agentdojo 1014 pos 845 neg 169
+[injecagent-benign] 17/17 0s
+ext_injecagent 2448 pos 2108 neg 340
+test_public                n= 3245 auroc=0.594 t0.5: R=0.189 FPR=0.000 P=1.000 fpr1: R=0.189 FPR=0.000 P=1.000
+test_bipia                 n=  712 auroc=0.500 t0.5: R=0.000 FPR=0.000 P=nan fpr1: R=0.000 FPR=0.000 P=nan
+test_promptshield          n= 3987 auroc=0.567 t0.5: R=0.147 FPR=0.012 P=0.822 fpr1: R=0.147 FPR=0.012 P=0.822
+test_synth_id              n=  552 auroc=0.669 t0.5: R=0.348 FPR=0.011 P=0.970 fpr1: R=0.348 FPR=0.011 P=0.970
+test_synth_ood_style       n= 1338 auroc=0.598 t0.5: R=0.196 FPR=0.000 P=1.000 fpr1: R=0.196 FPR=0.000 P=1.000
+test_synth_ood_carrier     n= 1142 auroc=0.668 t0.5: R=0.342 FPR=0.005 P=0.985 fpr1: R=0.342 FPR=0.005 P=0.985
+test_synth_ood_both        n=  288 auroc=0.632 t0.5: R=0.264 FPR=0.000 P=1.000 fpr1: R=0.264 FPR=0.000 P=1.000
+test_hardneg               n=  262 auroc=nan t0.5: R=nan FPR=0.042 P=0.000 fpr1: R=nan FPR=0.042 P=0.000
+ext_injecagent             n= 2448 auroc=0.750 t0.5: R=0.500 FPR=0.000 P=1.000 fpr1: R=0.500 FPR=0.000 P=1.000
+ext_agentdojo              n= 1014 auroc=0.700 t0.5: R=0.400 FPR=0.000 P=1.000 fpr1: R=0.400 FPR=0.000 P=1.000
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+W1024 17:59:29.631000 77938 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 6404.10it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: distilbert/distilroberta-base
+Key                         | Status     | 
+----------------------------+------------+-
+lm_head.bias                | UNEXPECTED | 
+lm_head.layer_norm.weight   | UNEXPECTED | 
+roberta.pooler.dense.bias   | UNEXPECTED | 
+lm_head.dense.weight        | UNEXPECTED | 
+lm_head.dense.bias          | UNEXPECTED | 
+roberta.pooler.dense.weight | UNEXPECTED | 
+lm_head.layer_norm.bias     | UNEXPECTED | 
+classifier.dense.bias       | MISSING    | 
+classifier.dense.weight     | MISSING    | 
+classifier.out_proj.bias    | MISSING    | 
+classifier.out_proj.weight  | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+train docs=24497 windows=28199 pos=12345 neg=15854
+step 200/3526 loss 0.5389 103s
+step 400/3526 loss 0.9105 210s
+step 600/3526 loss 0.3263 322s
+step 800/3526 loss 0.2521 439s
+step 1000/3526 loss 0.4319 550s
+step 1200/3526 loss 0.2832 665s
+step 1400/3526 loss 0.0016 777s
+step 1600/3526 loss 0.1124 894s
+step 1800/3526 loss 0.0005 1003s
+step 2000/3526 loss 0.0002 1111s
+step 2200/3526 loss 0.0004 1224s
+step 2400/3526 loss 0.0005 1342s
+step 2600/3526 loss 0.0003 1458s
+step 2800/3526 loss 0.0039 1567s
+step 3000/3526 loss 0.0003 1682s
+step 3200/3526 loss 0.0011 1787s
+step 3400/3526 loss 0.0042 1898s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.39it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  2.39it/s]
+val {"n": 2383, "pos": 1495, "auroc": 0.9992471150079846, "auroc_ci": [NaN, NaN], "t0.5": {"precision": 0.9972602739726028, "recall": 0.9739130434782609, "fpr": 0.0045045045045045045, "f1": 0.9854483925549915, "tp": 1456, "fp": 4, "fn": 39, "tn": 884, "threshold": 0.5, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}, "fpr1": {"precision": 0.9945872801082544, "recall": 0.9832775919732442, "fpr": 0.009009009009009009, "f1": 0.9889001009081736, "tp": 1470, "fp": 8, "fn": 25, "tn": 880, "threshold": 0.042187833918094636, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}}
+saved /Users/rishikesh/ai-safety-portfolio/injection-shield/models/distilroberta-s0
+W1024 18:33:09.162000 93386 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 8252.17it/s]
+test_public                n= 3245 auroc=0.997 t0.5: R=0.968 FPR=0.006 P=0.993 fpr1: R=0.978 FPR=0.010 P=0.988
+test_bipia                 n=  712 auroc=0.974 t0.5: R=0.908 FPR=0.062 P=0.978 fpr1: R=0.944 FPR=0.152 P=0.949
+test_promptshield          n= 3987 auroc=0.839 t0.5: R=0.609 FPR=0.081 P=0.743 fpr1: R=0.657 FPR=0.099 P=0.719
+test_synth_id              n=  552 auroc=0.997 t0.5: R=0.971 FPR=0.004 P=0.996 fpr1: R=0.978 FPR=0.004 P=0.996
+test_synth_ood_style       n= 1338 auroc=0.969 t0.5: R=0.750 FPR=0.001 P=0.998 fpr1: R=0.777 FPR=0.003 P=0.996
+test_synth_ood_carrier     n= 1142 auroc=0.994 t0.5: R=0.988 FPR=0.061 P=0.942 fpr1: R=0.988 FPR=0.103 P=0.905
+test_synth_ood_both        n=  288 auroc=0.949 t0.5: R=0.840 FPR=0.056 P=0.938 fpr1: R=0.861 FPR=0.111 P=0.886
+test_hardneg               n=  262 auroc=nan t0.5: R=nan FPR=0.080 P=0.000 fpr1: R=nan FPR=0.118 P=0.000
+ext_injecagent             n= 2448 auroc=0.886 t0.5: R=0.561 FPR=0.024 P=0.993 fpr1: R=0.591 FPR=0.029 P=0.992
+ext_agentdojo              n= 1014 auroc=0.989 t0.5: R=0.928 FPR=0.030 P=0.994 fpr1: R=0.946 FPR=0.053 P=0.989
+W1024 18:37:14.782000 95440 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 7803.43it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: distilbert/distilroberta-base
+Key                         | Status     | 
+----------------------------+------------+-
+roberta.pooler.dense.weight | UNEXPECTED | 
+lm_head.dense.bias          | UNEXPECTED | 
+lm_head.dense.weight        | UNEXPECTED | 
+lm_head.layer_norm.bias     | UNEXPECTED | 
+lm_head.layer_norm.weight   | UNEXPECTED | 
+lm_head.bias                | UNEXPECTED | 
+roberta.pooler.dense.bias   | UNEXPECTED | 
+classifier.dense.weight     | MISSING    | 
+classifier.dense.bias       | MISSING    | 
+classifier.out_proj.bias    | MISSING    | 
+classifier.out_proj.weight  | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+train docs=19748 windows=22893 pos=10044 neg=12849
+step 200/2862 loss 0.5299 113s
+step 400/2862 loss 0.0092 225s
+step 600/2862 loss 0.0041 334s
+step 800/2862 loss 0.0005 440s
+step 1000/2862 loss 0.4006 540s
+step 1200/2862 loss 0.0024 644s
+step 1400/2862 loss 0.4578 751s
+step 1600/2862 loss 0.0006 861s
+step 1800/2862 loss 0.0027 956s
+step 2000/2862 loss 0.0002 1062s
+step 2200/2862 loss 0.0004 1158s
+step 2400/2862 loss 0.0005 1257s
+step 2600/2862 loss 0.0004 1360s
+step 2800/2862 loss 0.0009 1453s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.25it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.24it/s]
+val {"n": 1792, "pos": 1213, "auroc": 0.9974883494440624, "auroc_ci": [NaN, NaN], "t0.5": {"precision": 0.9949238578680203, "recall": 0.9694971145919209, "fpr": 0.010362694300518135, "f1": 0.9820459290187892, "tp": 1176, "fp": 6, "fn": 37, "tn": 573, "threshold": 0.5, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}, "fpr1": {"precision": 0.9957337883959044, "recall": 0.9620774938169827, "fpr": 0.008635578583765112, "f1": 0.9786163522012578, "tp": 1167, "fp": 5, "fn": 46, "tn": 574, "threshold": 0.9065005050430298, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}}
+saved /Users/rishikesh/ai-safety-portfolio/injection-shield/models/distilroberta-publiconly-s0
+W1024 19:02:30.221000 8489 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 9057.11it/s]
+test_public                n= 3245 auroc=0.998 t0.5: R=0.969 FPR=0.007 P=0.992 fpr1: R=0.938 FPR=0.004 P=0.995
+test_bipia                 n=  712 auroc=0.954 t0.5: R=0.899 FPR=0.219 P=0.925 fpr1: R=0.684 FPR=0.011 P=0.995
+test_promptshield          n= 3987 auroc=0.835 t0.5: R=0.613 FPR=0.075 P=0.757 fpr1: R=0.529 FPR=0.043 P=0.826
+test_synth_id              n=  552 auroc=0.762 t0.5: R=0.355 FPR=0.072 P=0.831 fpr1: R=0.210 FPR=0.036 P=0.853
+test_synth_ood_style       n= 1338 auroc=0.705 t0.5: R=0.275 FPR=0.070 P=0.797 fpr1: R=0.135 FPR=0.025 P=0.841
+test_synth_ood_carrier     n= 1142 auroc=0.666 t0.5: R=0.426 FPR=0.193 P=0.688 fpr1: R=0.238 FPR=0.068 P=0.777
+test_synth_ood_both        n=  288 auroc=0.635 t0.5: R=0.417 FPR=0.229 P=0.645 fpr1: R=0.215 FPR=0.104 P=0.674
+test_hardneg               n=  262 auroc=nan t0.5: R=nan FPR=0.115 P=0.000 fpr1: R=nan FPR=0.034 P=0.000
+ext_injecagent             n= 2448 auroc=0.926 t0.5: R=0.770 FPR=0.062 P=0.987 fpr1: R=0.626 FPR=0.012 P=0.997
+ext_agentdojo              n= 1014 auroc=0.914 t0.5: R=0.782 FPR=0.083 P=0.979 fpr1: R=0.522 FPR=0.006 P=0.998
+W1024 19:06:07.950000 10313 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 46957.33it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: microsoft/MiniLM-L12-H384-uncased
+Key               | Status  | 
+------------------+---------+-
+classifier.bias   | MISSING | 
+classifier.weight | MISSING | 
+
+Notes:
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+train docs=24497 windows=26343 pos=12325 neg=14018
+step 200/4941 loss 0.4478 60s
+step 400/4941 loss 0.4028 127s
+step 600/4941 loss 0.2625 198s
+step 800/4941 loss 0.0889 271s
+step 1000/4941 loss 0.3550 337s
+step 1200/4941 loss 0.0116 402s
+step 1400/4941 loss 0.0132 463s
+step 1600/4941 loss 0.0625 525s
+step 1800/4941 loss 0.0094 590s
+step 2000/4941 loss 0.0030 651s
+step 2200/4941 loss 0.0028 714s
+step 2400/4941 loss 0.3016 779s
+step 2600/4941 loss 0.0015 846s
+step 2800/4941 loss 0.0308 908s
+step 3000/4941 loss 0.0460 987s
+step 3200/4941 loss 0.0023 1067s
+step 3400/4941 loss 0.0007 1140s
+step 3600/4941 loss 0.0024 1206s
+step 3800/4941 loss 0.4222 1273s
+step 4000/4941 loss 0.0009 1342s
+step 4200/4941 loss 0.0006 1418s
+step 4400/4941 loss 0.0005 1489s
+step 4600/4941 loss 0.0005 1558s
+step 4800/4941 loss 0.0008 1627s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  6.43it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  6.43it/s]
+val {"n": 2383, "pos": 1495, "auroc": 0.9986607008346139, "auroc_ci": [NaN, NaN], "t0.5": {"precision": 0.995221843003413, "recall": 0.9752508361204013, "fpr": 0.007882882882882882, "f1": 0.9851351351351352, "tp": 1458, "fp": 7, "fn": 37, "tn": 881, "threshold": 0.5, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}, "fpr1": {"precision": 0.9945615227736234, "recall": 0.9785953177257525, "fpr": 0.009009009009009009, "f1": 0.9865138233310857, "tp": 1463, "fp": 8, "fn": 32, "tn": 880, "threshold": 0.1251160518655777, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}}
+saved /Users/rishikesh/ai-safety-portfolio/injection-shield/models/minilm-s0
+W1024 19:34:40.805000 24935 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 7877.40it/s]
+test_public                n= 3245 auroc=0.998 t0.5: R=0.975 FPR=0.014 P=0.984 fpr1: R=0.978 FPR=0.015 P=0.983
+test_bipia                 n=  712 auroc=0.989 t0.5: R=0.946 FPR=0.022 P=0.992 fpr1: R=0.946 FPR=0.022 P=0.992
+test_promptshield          n= 3987 auroc=0.843 t0.5: R=0.566 FPR=0.109 P=0.665 fpr1: R=0.589 FPR=0.120 P=0.653
+test_synth_id              n=  552 auroc=0.996 t0.5: R=0.975 FPR=0.007 P=0.993 fpr1: R=0.975 FPR=0.007 P=0.993
+test_synth_ood_style       n= 1338 auroc=0.968 t0.5: R=0.824 FPR=0.000 P=1.000 fpr1: R=0.831 FPR=0.001 P=0.998
+test_synth_ood_carrier     n= 1142 auroc=0.997 t0.5: R=0.989 FPR=0.012 P=0.988 fpr1: R=0.989 FPR=0.014 P=0.986
+test_synth_ood_both        n=  288 auroc=0.963 t0.5: R=0.868 FPR=0.007 P=0.992 fpr1: R=0.875 FPR=0.014 P=0.984
+test_hardneg               n=  262 auroc=nan t0.5: R=nan FPR=0.065 P=0.000 fpr1: R=nan FPR=0.073 P=0.000
+ext_injecagent             n= 2448 auroc=0.868 t0.5: R=0.570 FPR=0.015 P=0.996 fpr1: R=0.581 FPR=0.018 P=0.995
+ext_agentdojo              n= 1014 auroc=0.966 t0.5: R=0.787 FPR=0.036 P=0.991 fpr1: R=0.804 FPR=0.036 P=0.991
+W1024 19:36:41.552000 25946 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 18430.25it/s]
+/Users/rishikesh/ai-safety-portfolio/injection-shield/scripts/export_onnx.py:52: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(Wrap(model), tuple(dummy[n] for n in names), fp32, input_names=names, output_names=["logits"],
+/Users/rishikesh/ai-safety-portfolio/injection-shield/.venv/lib/python3.11/site-packages/transformers/masking_utils.py:208: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (padding_length := kv_length + kv_offset - attention_mask.shape[-1]) > 0:
+/Users/rishikesh/ai-safety-portfolio/injection-shield/.venv/lib/python3.11/site-packages/transformers/integrations/sdpa_attention.py:136: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  is_causal = q_length > 1 and attention_mask is None and is_causal
+/Users/rishikesh/ai-safety-portfolio/injection-shield/.venv/lib/python3.11/site-packages/torch/onnx/_internal/torchscript_exporter/symbolic_opset11.py:955: UserWarning: Exporting aten::index operator of advanced indexing in opset 17 is achieved by combination of multiple ONNX operators, including Reshape, Transpose, Concat, and Gather. If indices include negative values, the exported graph will produce incorrect results.
+  return opset9.index(g, self, index)
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+{
+ "n": 600,
+ "mean_abs_diff": 0.014435114585406457,
+ "max_abs_diff": 0.9845750229433179,
+ "decision_agreement_fpr1": 0.9866666666666667,
+ "size_mb_fp32": 127.46980857849121,
+ "size_mb_int8": 32.37644577026367
+}
+W1024 19:37:39.787000 26437 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 7627.99it/s]
+scored 200 cases
+W1024 19:37:50.455000 26535 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+/Users/rishikesh/ai-safety-portfolio/injection-shield/.venv/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 7711.10it/s]
+test_public                n= 3245 auroc=0.974 t0.5: R=0.797 FPR=0.004 P=0.994 fpr1: R=0.668 FPR=0.002 P=0.996

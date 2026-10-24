@@ -21,6 +21,7 @@ def load(split):
 
 def device():
     import torch
+    torch.set_num_threads(4)  # shared laptop: see _shared/RULES.md
     return "mps" if torch.backends.mps.is_available() else "cpu"
 
 

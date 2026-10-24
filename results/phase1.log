@@ -15,3 +15,52 @@ train docs=19759 windows=21156 pos=10067 neg=11089
 val {"n": 1781, "pos": 1184, "auroc": 0.8292164652089276, "auroc_ci": [NaN, NaN], "t0.5": {"precision": 0.664795058955643, "recall": 1.0, "fpr": 1.0, "f1": 0.7986509274873526, "tp": 1184, "fp": 597, "fn": 0, "tn": 0, "threshold": 0.5, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}, "fpr1": {"precision": 0.9645390070921985, "recall": 0.11486486486486487, "fpr": 0.008375209380234505, "f1": 0.20528301886792455, "tp": 136, "fp": 5, "fn": 1048, "tn": 592, "threshold": 0.5136056409606934, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}}
 saved /Users/rishikesh/ai-safety-portfolio/injection-shield/models/smoke-s0
 == protectai
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+W1024 15:02:33.019000 2192 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+/Users/rishikesh/ai-safety-portfolio/injection-shield/.venv/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 6354.24it/s]
+test_public                n= 3245 auroc=0.974 t0.5: R=0.797 FPR=0.004 P=0.994 fpr1: R=0.748 FPR=0.003 P=0.996
+test_bipia                 n=  712 auroc=0.407 t0.5: R=0.182 FPR=0.197 P=0.735 fpr1: R=0.139 FPR=0.140 P=0.747
+test_promptshield          n= 3987 auroc=0.716 t0.5: R=0.048 FPR=0.015 P=0.546 fpr1: R=0.032 FPR=0.010 P=0.556
+skip (missing) test_synth_id
+skip (missing) test_synth_ood_style
+skip (missing) test_synth_ood_carrier
+skip (missing) test_synth_ood_both
+skip (missing) test_hardneg
+ext_injecagent             n= 2448 auroc=0.832 t0.5: R=0.821 FPR=0.353 P=0.935 fpr1: R=0.654 FPR=0.153 P=0.964
+ext_agentdojo              n= 1014 auroc=0.801 t0.5: R=0.680 FPR=0.266 P=0.927 fpr1: R=0.549 FPR=0.195 P=0.934
+== deberta public-only
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+W1024 15:19:21.470000 9241 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+/Users/rishikesh/ai-safety-portfolio/injection-shield/.venv/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/102 [00:00<?, ?it/s]Loading weights: 100%|██████████| 102/102 [00:00<00:00, 34943.97it/s]
+[transformers] [1mDebertaV2ForSequenceClassification LOAD REPORT[0m from: microsoft/deberta-v3-small
+Key                                     | Status     | 
+----------------------------------------+------------+-
+mask_predictions.dense.weight           | UNEXPECTED | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED | 
+lm_predictions.lm_head.bias             | UNEXPECTED | 
+mask_predictions.dense.bias             | UNEXPECTED | 
+mask_predictions.LayerNorm.bias         | UNEXPECTED | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED | 
+mask_predictions.classifier.weight      | UNEXPECTED | 
+mask_predictions.classifier.bias        | UNEXPECTED | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED | 
+classifier.weight                       | MISSING    | 
+pooler.dense.bias                       | MISSING    | 
+classifier.bias                         | MISSING    | 
+pooler.dense.weight                     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+train docs=19759 windows=21086 pos=10061 neg=11025
+step 200/2636 loss nan 173s
+step 400/2636 loss nan 512s
+step 600/2636 loss nan 936s
+/Users/rishikesh/.local/share/uv/python/cpython-3.11.17-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

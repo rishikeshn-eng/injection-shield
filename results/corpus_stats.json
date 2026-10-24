@@ -9,6 +9,14 @@
    "bipia_email": 176
   }
  },
+ "test_hardneg": {
+  "n": 262,
+  "pos": 0,
+  "neg": 262,
+  "sources": {
+   "synth_hardneg": 262
+  }
+ },
  "test_promptshield": {
   "n": 3987,
   "pos": 1104,
@@ -31,41 +39,76 @@
    "gandalf_summarization": 13
   }
  },
- "train": {
-  "n": 19777,
-  "pos": 10050,
-  "neg": 9727,
+ "test_synth_id": {
+  "n": 552,
+  "pos": 276,
+  "neg": 276,
   "sources": {
-   "safeguard": 7517,
-   "promptshield": 5639,
-   "mosscap": 2323,
-   "jackhhao": 1103,
+   "synth": 552
+  }
+ },
+ "test_synth_ood_both": {
+  "n": 288,
+  "pos": 144,
+  "neg": 144,
+  "sources": {
+   "synth": 288
+  }
+ },
+ "test_synth_ood_carrier": {
+  "n": 1142,
+  "pos": 571,
+  "neg": 571,
+  "sources": {
+   "synth": 1142
+  }
+ },
+ "test_synth_ood_style": {
+  "n": 1338,
+  "pos": 669,
+  "neg": 669,
+  "sources": {
+   "synth": 1338
+  }
+ },
+ "train": {
+  "n": 24497,
+  "pos": 12166,
+  "neg": 12331,
+  "sources": {
+   "safeguard": 7511,
+   "promptshield": 5646,
+   "synth": 4308,
+   "mosscap": 2317,
+   "jackhhao": 1115,
    "gandalf_ignore_instructions": 726,
-   "tensortrust": 696,
-   "bipia_table": 689,
-   "deepset": 517,
-   "bipia_code": 240,
-   "bipia_email": 201,
-   "gandalf_summarization": 108,
-   "synth": 18
+   "bipia_table": 695,
+   "tensortrust": 686,
+   "deepset": 509,
+   "synth_hardneg": 441,
+   "bipia_code": 236,
+   "bipia_email": 196,
+   "gandalf_summarization": 111
   }
  },
  "val": {
-  "n": 1781,
-  "pos": 1184,
-  "neg": 597,
+  "n": 2383,
+  "pos": 1495,
+  "neg": 888,
   "sources": {
-   "mosscap": 554,
-   "safeguard": 460,
-   "promptshield": 361,
+   "synth": 564,
+   "mosscap": 560,
+   "safeguard": 466,
+   "promptshield": 354,
    "gandalf_ignore_instructions": 161,
-   "jackhhao": 74,
-   "bipia_table": 61,
-   "tensortrust": 40,
-   "deepset": 28,
-   "gandalf_summarization": 19,
-   "bipia_email": 13,
-   "bipia_code": 10
+   "jackhhao": 62,
+   "bipia_table": 55,
+   "tensortrust": 50,
+   "deepset": 36,
+   "synth_hardneg": 27,
+   "bipia_email": 18,
+   "gandalf_summarization": 16,
+   "bipia_code": 14
   }
  }
 }

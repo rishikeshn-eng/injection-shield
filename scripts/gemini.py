@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE_DIR = os.path.join(ROOT, "cache")
 BULK = "gemini-3.5-flash-lite"
-JUDGE = "gemini-3.5-flash"
+JUDGE = os.environ.get("JUDGE_MODEL", "gemini-3.5-flash")  # 3.5-flash free tier: 20 requests/day
 MAX_CONCURRENT = 4
 
 _lock = threading.Lock()
@@ -94,10 +94,20 @@ def call_raw(payload, model=BULK, retries=12, timeout=180, cache_only=False):
             if b"PerDay" in raw:  # daily cap: waiting hours is pointless, let the caller move on
                 raise RuntimeError("daily quota exhausted for " + model)
             if m:
+                if os.environ.get("GEMINI_DEBUG"):
+                    print(f"[gemini {model}] 429 hint {m.group(1)!r}: {raw[:200]!r}", flush=True)
                 time.sleep(min(float(m.group(1)), 120) + random.random() * 5)
                 continue
         except Exception as e:  # timeouts, connection resets
             last = repr(e)
+            if "timed out" in last and "generationConfig" in payload:
+                # a seeded request that degenerates into a huge output times out identically every time:
+                # resample with a new seed (the cache key stays that of the original payload)
+                gc = dict(payload["generationConfig"])
+                gc["seed"] = random.randrange(10**6)
+                body = json.dumps({**payload, "generationConfig": gc}).encode()
+        if os.environ.get("GEMINI_DEBUG"):
+            print(f"[gemini {model}] retry after: {last[:160]}", flush=True)
         time.sleep(delay + random.random() * delay)
         delay = min(delay * 2, 120)
     raise RuntimeError(f"gemini failed after retries: {last}")

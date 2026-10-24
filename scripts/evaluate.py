@@ -66,10 +66,14 @@ def main():
     ap.add_argument("--splits", default=",".join(EVAL_SPLITS))
     args = ap.parse_args()
     score, thr = get_scorer(args)
-    if "fpr1" not in thr:  # calibrate baselines on our val split the same way as the fine-tuned models
+    # every detector is calibrated on the same (full) validation split: fpr1 = 1% FPR on val negatives
+    if True:
         val = load("val")
         vs = score([r["text"] for r in val])
         thr["fpr1"] = threshold_at_fpr(np.array([r["label"] for r in val]), vs, 0.01)
+    if args.kind == "hf":
+        p = args.path if os.path.isabs(args.path) else os.path.join(ROOT, args.path)
+        json.dump(thr, open(os.path.join(p, "thresholds.json"), "w"), indent=1)
     res = {"thresholds": thr, "splits": {}}
     from common import CORPUS
     for split in args.splits.split(","):

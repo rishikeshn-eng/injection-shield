@@ -1,0 +1,10 @@
+{
+ "base": "MiniLM-L12-H384-uncased",
+ "thresholds": {
+  "t0.5": 0.5,
+  "fpr1": 0.1251160518655777
+ },
+ "size_mb": 32.37644577026367,
+ "window": 320,
+ "stride": 224
+}

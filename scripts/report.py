@@ -28,9 +28,8 @@ FPR_SPLITS = ["test_public", "test_promptshield", "test_synth_id", "test_synth_o
 DETECTORS = [  # (metrics file stem or glob for seeds, label)
     ("keyword", "Keyword rules"),
     ("protectai-v2", "ProtectAI deberta-v3-base-injection-v2 (184M)"),
-    ("gemini-judge", "LLM judge (Gemini 3.5 Flash)*"),
-    ("deberta-small-publiconly-s*", "DeBERTa-v3-small, public data only"),
-    ("deberta-small-s*", "DeBERTa-v3-small, + synthetic (ours)"),
+    ("llm-judge", "LLM judge (Gemma-4-31B via Gemini API)*"),
+    ("distilroberta-publiconly-s*", "DistilRoBERTa, public data only"),
     ("distilroberta-s*", "DistilRoBERTa, + synthetic (ours)"),
     ("minilm-s*", "MiniLM-L12, + synthetic (ours, browser model)"),
 ]
@@ -145,7 +144,7 @@ def main():
 
     per_style = {}
     for stem, label in [("keyword", "Keyword"), ("protectai-v2", "ProtectAI"),
-                        ("deberta-small-publiconly-s0", "DeBERTa public-only"), ("deberta-small-s0", "DeBERTa + synth"),
+                        ("distilroberta-publiconly-s0", "DistilRoBERTa public-only"), ("distilroberta-s0", "DistilRoBERTa + synth"),
                         ("minilm-s0", "MiniLM + synth")]:
         f = os.path.join(RESULTS, "metrics", stem + ".json")
         if os.path.exists(f):
@@ -177,14 +176,14 @@ def main():
             md.append(f"| {k} | " + " | ".join(pct(v.get(s)) for s in styles) + " |")
 
     # ---- judge paired comparison ----
-    if os.path.isdir(sub_dir) and os.path.exists(os.path.join(RESULTS, "metrics", "gemini-judge.json")):
+    if os.path.isdir(sub_dir) and os.path.exists(os.path.join(RESULTS, "metrics", "llm-judge.json")):
         md += ["\n\n## Paired comparison on the LLM-judge subsample (recall / FPR, %)\n",
                "The judge scores 8 documents per request on <=160 documents per split (free-tier quota). Ours and "
                "the judge are evaluated on the identical documents. Judge threshold 0.5; ours: 1% val FPR.\n",
                "| Split | n | Judge recall | Judge FPR | Ours recall | Ours FPR |", "|---|---:|---:|---:|---:|---:|"]
-        ours = os.path.join(RESULTS, "scores", "deberta-small-s0")
-        thr_ours = json.load(open(os.path.join(RESULTS, "metrics", "deberta-small-s0.json")))["thresholds"]["fpr1"] \
-            if os.path.exists(os.path.join(RESULTS, "metrics", "deberta-small-s0.json")) else None
+        ours = os.path.join(RESULTS, "scores", "distilroberta-s0")
+        thr_ours = json.load(open(os.path.join(RESULTS, "metrics", "distilroberta-s0.json")))["thresholds"]["fpr1"] \
+            if os.path.exists(os.path.join(RESULTS, "metrics", "distilroberta-s0.json")) else None
         judge_rows = {}
         for f in sorted(glob.glob(os.path.join(sub_dir, "*.jsonl"))):
             split = os.path.basename(f)[:-6]
@@ -242,7 +241,7 @@ def main():
     n_train = stats.get("train", {}).get("n", 0)
     n_synth = sum(v["sources"].get("synth", 0) for v in stats.values())
     headline = []
-    main_lab = next((l for l in table if l.startswith("DeBERTa-v3-small, +")), None)
+    main_lab = next((l for l in table if l.startswith("DistilRoBERTa, +")), None)
     pub_lab = next((l for l in table if "public data only" in l), None)
     if main_lab:
         sp = table[main_lab][1]

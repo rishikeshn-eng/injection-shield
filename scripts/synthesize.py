@@ -15,8 +15,11 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 from gemini import BULK, generate, pmap, refresh  # noqa: E402
 
-SYNTH_MODELS = [BULK, "gemini-3.1-flash-lite", "gemma-4-26b-a4b-it"]
+SYNTH_MODELS = [BULK, "gemini-3.1-flash-lite", "gemma-4-26b-a4b-it", "gemma-4-31b-it"]
 MODEL = os.environ.get("SYNTH_MODEL", BULK)
+MAX_NEW_CALLS = int(os.environ.get("SYNTH_MAX_CALLS", 10**9))  # protect a shared daily quota
+import threading  # noqa: E402
+_cap_lock, _new_calls = threading.Lock(), [0]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data", "synth")
@@ -185,6 +188,10 @@ def run_job(job, n=6, cache_only=False):
             pass
     if cache_only:
         raise KeyError("not cached")
+    with _cap_lock:
+        if _new_calls[0] >= MAX_NEW_CALLS:
+            raise RuntimeError("call cap reached")
+        _new_calls[0] += 1
     job["generator"] = MODEL
     return items_of(generate(p, model=MODEL, **kw))
 

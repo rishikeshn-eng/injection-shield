@@ -1,0 +1,14 @@
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[judge test_public] 20/20 106s
+test_public                n=160 failed=0 auroc=0.893 R=0.750 FPR=0.025
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[judge test_bipia] 20/20 98s
+test_bipia                 n=160 failed=0 auroc=0.900 R=0.700 FPR=0.000
+[judge test_promptshield] 20/20 0s
+test_promptshield          n=160 failed=0 auroc=0.861 R=0.725 FPR=0.000
+[gemini gemma-4-31b-it] 429 hint b'7.136945017': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'7.069489827': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'57.45333136': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'54.926825574': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'

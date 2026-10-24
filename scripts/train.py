@@ -101,7 +101,7 @@ def main():
     w = torch.tensor([1.0, (len(ex) - n_pos) / max(1, n_pos)], device=dev).clamp(max=3.0)
     lossf = torch.nn.CrossEntropyLoss(weight=w)
 
-    step, t0 = 0, time.time()
+    step, t0, n_bad = 0, time.time(), 0
     model.train()
     while step < total:
         for b in batches():
@@ -111,6 +111,12 @@ def main():
             batch = {k: v.to(dev) for k, v in batch.items()}
             y = torch.tensor([ex[i][1] for i in b], device=dev)
             loss = lossf(model(**batch).logits.float(), y)
+            if not torch.isfinite(loss):  # fail fast instead of burning shared GPU time on a diverged run
+                n_bad += 1
+                opt.zero_grad()
+                if n_bad > 20:
+                    raise RuntimeError(f"non-finite loss {n_bad} times by step {step}")
+                continue
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             opt.step()

@@ -77,7 +77,7 @@ def main():
         e = np.exp(lo - lo.max(-1, keepdims=True))
         ox += (e[:, 1] / e.sum(-1)).tolist()
     pt, ox, y = np.array(pt), np.array(ox), np.array([r["label"] for r in rows])
-    thr = json.load(open(os.path.join(src, "train_info.json")))["thresholds"]
+    thr = json.load(open(os.path.join(src, "thresholds.json")))
     parity = {"n": len(rows), "mean_abs_diff": float(np.abs(pt - ox).mean()), "max_abs_diff": float(np.abs(pt - ox).max()),
               "decision_agreement_fpr1": float(np.mean((pt >= thr["fpr1"]) == (ox >= thr["fpr1"]))),
               "torch_fp32": metrics(y, pt, thr, n_boot=0), "onnx_int8": metrics(y, ox, thr, n_boot=0),
