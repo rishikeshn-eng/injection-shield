@@ -1,0 +1,11 @@
+.venv/
+data/
+cache/
+models/
+*.onnx
+!site/model/injection-shield/onnx/model_quantized.onnx
+.env
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/

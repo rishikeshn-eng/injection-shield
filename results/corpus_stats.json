@@ -1,0 +1,71 @@
+{
+ "test_bipia": {
+  "n": 712,
+  "pos": 534,
+  "neg": 178,
+  "sources": {
+   "bipia_table": 336,
+   "bipia_code": 200,
+   "bipia_email": 176
+  }
+ },
+ "test_promptshield": {
+  "n": 3987,
+  "pos": 1104,
+  "neg": 2883,
+  "sources": {
+   "promptshield": 3987
+  }
+ },
+ "test_public": {
+  "n": 3245,
+  "pos": 1530,
+  "neg": 1715,
+  "sources": {
+   "safeguard": 2048,
+   "mosscap": 398,
+   "jackhhao": 372,
+   "tensortrust": 186,
+   "deepset": 116,
+   "gandalf_ignore_instructions": 112,
+   "gandalf_summarization": 13
+  }
+ },
+ "train": {
+  "n": 19777,
+  "pos": 10050,
+  "neg": 9727,
+  "sources": {
+   "safeguard": 7517,
+   "promptshield": 5639,
+   "mosscap": 2323,
+   "jackhhao": 1103,
+   "gandalf_ignore_instructions": 726,
+   "tensortrust": 696,
+   "bipia_table": 689,
+   "deepset": 517,
+   "bipia_code": 240,
+   "bipia_email": 201,
+   "gandalf_summarization": 108,
+   "synth": 18
+  }
+ },
+ "val": {
+  "n": 1781,
+  "pos": 1184,
+  "neg": 597,
+  "sources": {
+   "mosscap": 554,
+   "safeguard": 460,
+   "promptshield": 361,
+   "gandalf_ignore_instructions": 161,
+   "jackhhao": 74,
+   "bipia_table": 61,
+   "tensortrust": 40,
+   "deepset": 28,
+   "gandalf_summarization": 19,
+   "bipia_email": 13,
+   "bipia_code": 10
+  }
+ }
+}
