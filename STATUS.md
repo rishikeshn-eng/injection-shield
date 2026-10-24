@@ -1,7 +1,7 @@
 # STATUS — injection-shield
 
-- **Repo:** https://github.com/rishikeshn-eng/injection-shield (to be created and pushed by the coordinating session)
-- **Pages:** https://rishikeshn-eng.github.io/injection-shield/ (source: `site/` on `main`)
+- **Repo:** https://github.com/rishikeshn-eng/injection-shield (public)
+- **Pages:** https://rishikeshn-eng.github.io/injection-shield/ (deployed from `site/` by `.github/workflows/pages.yml`)
 - **State:** complete except for items under "Left undone".
 
 ## Headline
