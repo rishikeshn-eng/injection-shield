@@ -22,11 +22,12 @@ $PY scripts/salvage_v1.py
 $PY scripts/build_corpus.py
 $PY scripts/build_external.py
 
-# 3. train + evaluate (GPU)
+# 3. train + evaluate + export the browser model (GPU)
 $LOCK bash scripts/phase2.sh
 
-# 4. LLM judge, agent test, report
-$PY scripts/judge_baseline.py
-AGENT_MODEL=gemma-4-26b-a4b-it $PY scripts/agent_eval.py run --threshold fpr1
-AGENT_MODEL=gemini-3.5-flash-lite $PY scripts/agent_eval.py run --threshold fpr1
+# 4. agent test (shield = shipped int8 ONNX model on CPU), fragment diagnostic, LLM judge, report
+$PY scripts/agent_eval.py score --model onnx
+$PY scripts/diag_fragments.py onnx
+for t in t0.5 fpr1; do AGENT_MODEL=gemma-4-26b-a4b-it JUDGE_MODEL=gemma-4-26b-a4b-it $PY scripts/agent_eval.py run --threshold $t; done
+JUDGE_MODEL=gemma-4-31b-it $PY scripts/judge_baseline.py
 $PY scripts/report.py

@@ -1,0 +1,1004 @@
+{
+ "setup": "Training set 24,497 documents. Synthetic data: 4,096 injected tool outputs, each paired with its clean original, plus 730 benign hard negatives. Thresholds are fixed on the validation split before looking at test data. DistilRoBERTa: mean of 2 seeds.",
+ "headline": [
+  {
+   "v": "76.2%",
+   "k": "recall on held-out attack styles at 1% FPR (ours)"
+  },
+  {
+   "v": "13.5%",
+   "k": "same, classifier trained on public (mostly direct) data only"
+  },
+  {
+   "v": "62.7%",
+   "k": "recall on InjecAgent (never trained on)"
+  },
+  {
+   "v": "89.2% vs 55.0%",
+   "k": "agent utility under attack: in-context redaction vs blocking the whole tool output (attack success 0.8% \u2192 0.0%)"
+  }
+ ],
+ "recall_cols": [
+  {
+   "key": "test_public",
+   "label": "Public direct (test)"
+  },
+  {
+   "key": "test_bipia",
+   "label": "BIPIA (test)"
+  },
+  {
+   "key": "test_synth_id",
+   "label": "Synthetic ID"
+  },
+  {
+   "key": "test_synth_ood_style",
+   "label": "OOD style"
+  },
+  {
+   "key": "test_synth_ood_carrier",
+   "label": "OOD carrier"
+  },
+  {
+   "key": "test_synth_ood_both",
+   "label": "OOD style+carrier"
+  },
+  {
+   "key": "ext_injecagent",
+   "label": "InjecAgent"
+  },
+  {
+   "key": "ext_agentdojo",
+   "label": "AgentDojo"
+  }
+ ],
+ "fpr_cols": [
+  {
+   "key": "test_public",
+   "label": "Public direct (test)"
+  },
+  {
+   "key": "test_promptshield",
+   "label": "PromptShield"
+  },
+  {
+   "key": "test_synth_id",
+   "label": "Synthetic ID"
+  },
+  {
+   "key": "test_synth_ood_style",
+   "label": "OOD style"
+  },
+  {
+   "key": "test_synth_ood_carrier",
+   "label": "OOD carrier"
+  },
+  {
+   "key": "test_hardneg",
+   "label": "Hard negatives"
+  },
+  {
+   "key": "ext_injecagent",
+   "label": "InjecAgent"
+  },
+  {
+   "key": "ext_agentdojo",
+   "label": "AgentDojo"
+  }
+ ],
+ "detectors": [
+  {
+   "label": "Keyword rules",
+   "splits": {
+    "test_synth_ood_both": {
+     "recall": 0.2638888888888889,
+     "recall_ci": [
+      0.18794809604656804,
+      0.3357677851617823
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.6319444444444444
+    },
+    "test_promptshield": {
+     "recall": 0.14673913043478262,
+     "recall_ci": [
+      0.1261868610183217,
+      0.16842500116133227
+     ],
+     "seeds": 1,
+     "fpr": 0.012140131807145335,
+     "fpr_ci": [
+      0.008537024735187566,
+      0.016300828197941937
+     ],
+     "auroc": 0.5672994993138187
+    },
+    "test_synth_id": {
+     "recall": 0.34782608695652173,
+     "recall_ci": [
+      0.29492781201659835,
+      0.4038046933116927
+     ],
+     "seeds": 1,
+     "fpr": 0.010869565217391304,
+     "fpr_ci": [
+      0.0,
+      0.025643382352941172
+     ],
+     "auroc": 0.6686948645242595
+    },
+    "test_hardneg": {
+     "recall": null,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "seeds": 1,
+     "fpr": 0.04198473282442748,
+     "fpr_ci": [
+      0.019083969465648856,
+      0.06870229007633588
+     ],
+     "auroc": null
+    },
+    "test_public": {
+     "recall": 0.18888888888888888,
+     "recall_ci": [
+      0.16955245338010594,
+      0.20726926350758376
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.5944444444444444
+    },
+    "ext_agentdojo": {
+     "recall": 0.4,
+     "recall_ci": [
+      0.3674893803859615,
+      0.43408000249364054
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.7
+    },
+    "ext_injecagent": {
+     "recall": 0.5,
+     "recall_ci": [
+      0.4758008114226281,
+      0.5215951630970731
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.75
+    },
+    "test_synth_ood_carrier": {
+     "recall": 0.3415061295971979,
+     "recall_ci": [
+      0.30507008386604895,
+      0.3816092992701648
+     ],
+     "seeds": 1,
+     "fpr": 0.005253940455341506,
+     "fpr_ci": [
+      0.0,
+      0.012090857661120141
+     ],
+     "auroc": 0.6682227081870071
+    },
+    "test_bipia": {
+     "recall": 0.0,
+     "recall_ci": [
+      0.0,
+      0.0
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.5
+    },
+    "test_synth_ood_style": {
+     "recall": 0.19581464872944693,
+     "recall_ci": [
+      0.1661676646706587,
+      0.2253113268336415
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.5979073243647235
+    }
+   },
+   "threshold": "fpr1"
+  },
+  {
+   "label": "ProtectAI deberta-v3-base-injection-v2 (184M)",
+   "splits": {
+    "test_synth_ood_both": {
+     "recall": 0.06944444444444445,
+     "recall_ci": [
+      0.0327672131147541,
+      0.11333333333333333
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.6929012345679013
+    },
+    "test_promptshield": {
+     "recall": 0.017210144927536232,
+     "recall_ci": [
+      0.010054385900532434,
+      0.025165785728464674
+     ],
+     "seeds": 1,
+     "fpr": 0.002774887270204648,
+     "fpr_ci": [
+      0.0010348306788309882,
+      0.004520206204269215
+     ],
+     "auroc": 0.7157344465557718
+    },
+    "test_synth_id": {
+     "recall": 0.16304347826086957,
+     "recall_ci": [
+      0.12043795620437957,
+      0.20717721705769515
+     ],
+     "seeds": 1,
+     "fpr": 0.014492753623188406,
+     "fpr_ci": [
+      0.0034840180991095623,
+      0.028371318240327095
+     ],
+     "auroc": 0.6810412728418399
+    },
+    "test_hardneg": {
+     "recall": null,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "seeds": 1,
+     "fpr": 0.08015267175572519,
+     "fpr_ci": [
+      0.04961832061068702,
+      0.11450381679389313
+     ],
+     "auroc": null
+    },
+    "test_public": {
+     "recall": 0.6679738562091503,
+     "recall_ci": [
+      0.6441192189588193,
+      0.6909399915277062
+     ],
+     "seeds": 1,
+     "fpr": 0.0023323615160349854,
+     "fpr_ci": [
+      0.0005707275546620536,
+      0.004849967484533179
+     ],
+     "auroc": 0.9735374149659866
+    },
+    "ext_agentdojo": {
+     "recall": 0.3514792899408284,
+     "recall_ci": [
+      0.32092472822347595,
+      0.38225984323733136
+     ],
+     "seeds": 1,
+     "fpr": 0.05917159763313609,
+     "fpr_ci": [
+      0.027777777777777776,
+      0.09459659363505518
+     ],
+     "auroc": 0.8007317670949896
+    },
+    "ext_injecagent": {
+     "recall": 0.5109108159392789,
+     "recall_ci": [
+      0.4887809296292516,
+      0.5311815482397737
+     ],
+     "seeds": 1,
+     "fpr": 0.008823529411764706,
+     "fpr_ci": [
+      0.0,
+      0.019485079527214354
+     ],
+     "auroc": 0.8321903951333856
+    },
+    "test_synth_ood_carrier": {
+     "recall": 0.07880910683012259,
+     "recall_ci": [
+      0.058519793459552494,
+      0.10090839553103703
+     ],
+     "seeds": 1,
+     "fpr": 0.005253940455341506,
+     "fpr_ci": [
+      0.0,
+      0.011028557748741218
+     ],
+     "auroc": 0.6782643900613727
+    },
+    "test_bipia": {
+     "recall": 0.07116104868913857,
+     "recall_ci": [
+      0.05113068181818182,
+      0.09320653288664023
+     ],
+     "seeds": 1,
+     "fpr": 0.08426966292134831,
+     "fpr_ci": [
+      0.04735380116959065,
+      0.12576744102157128
+     ],
+     "auroc": 0.40725602827925766
+    },
+    "test_synth_ood_style": {
+     "recall": 0.11509715994020926,
+     "recall_ci": [
+      0.09158815862339101,
+      0.14032045654082528
+     ],
+     "seeds": 1,
+     "fpr": 0.02391629297458894,
+     "fpr_ci": [
+      0.012833787435236955,
+      0.035613695090439275
+     ],
+     "auroc": 0.6780774017396511
+    }
+   },
+   "threshold": "fpr1"
+  },
+  {
+   "label": "LLM judge (Gemma-4-31B via Gemini API)*",
+   "splits": {
+    "test_synth_ood_both": {
+     "recall": 0.9230769230769231,
+     "recall_ci": [
+      0.8611023206751055,
+      0.975
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.9743589743589743
+    },
+    "test_promptshield": {
+     "recall": 0.725,
+     "recall_ci": [
+      0.6321687840290381,
+      0.8182092004381162
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.86078125
+    },
+    "test_synth_id": {
+     "recall": 0.9875,
+     "recall_ci": [
+      0.958904109589041,
+      1.0
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 1.0
+    },
+    "test_public": {
+     "recall": 0.75,
+     "recall_ci": [
+      0.6538333333333334,
+      0.8415111666176902
+     ],
+     "seeds": 1,
+     "fpr": 0.025,
+     "fpr_ci": [
+      0.0,
+      0.06097560975609756
+     ],
+     "auroc": 0.89328125
+    },
+    "test_synth_ood_carrier": {
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 1.0
+    },
+    "test_bipia": {
+     "recall": 0.7,
+     "recall_ci": [
+      0.6,
+      0.7955006142506141
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.9
+    },
+    "test_synth_ood_style": {
+     "recall": 0.925,
+     "recall_ci": [
+      0.8666666666666667,
+      0.9759107860011474
+     ],
+     "seeds": 1,
+     "fpr": 0.0,
+     "fpr_ci": [
+      0.0,
+      0.0
+     ],
+     "auroc": 0.9625
+    }
+   },
+   "threshold": "t0.5"
+  },
+  {
+   "label": "DistilRoBERTa, public data only",
+   "splits": {
+    "test_synth_ood_both": {
+     "recall": 0.2152777777777778,
+     "recall_ci": [
+      0.15064121247449722,
+      0.2848604160533804
+     ],
+     "seeds": 1,
+     "fpr": 0.10416666666666667,
+     "fpr_ci": [
+      0.0547945205479452,
+      0.15384615384615385
+     ],
+     "auroc": 0.6353684413580247
+    },
+    "test_promptshield": {
+     "recall": 0.5289855072463768,
+     "recall_ci": [
+      0.4995232774271635,
+      0.5591486527862829
+     ],
+     "seeds": 1,
+     "fpr": 0.04266389177939646,
+     "fpr_ci": [
+      0.03583489646279983,
+      0.049778492028749496
+     ],
+     "auroc": 0.8351263905854913
+    },
+    "test_synth_id": {
+     "recall": 0.21014492753623187,
+     "recall_ci": [
+      0.1627054396377654,
+      0.2559071914218914
+     ],
+     "seeds": 1,
+     "fpr": 0.036231884057971016,
+     "fpr_ci": [
+      0.014646725116039195,
+      0.05970543409712003
+     ],
+     "auroc": 0.7624448645242595
+    },
+    "test_hardneg": {
+     "recall": null,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "seeds": 1,
+     "fpr": 0.03435114503816794,
+     "fpr_ci": [
+      0.015267175572519083,
+      0.05725190839694656
+     ],
+     "auroc": null
+    },
+    "test_public": {
+     "recall": 0.9379084967320261,
+     "recall_ci": [
+      0.92539042406263,
+      0.9499670943017212
+     ],
+     "seeds": 1,
+     "fpr": 0.004081632653061225,
+     "fpr_ci": [
+      0.0011981439207265872,
+      0.007038744543538635
+     ],
+     "auroc": 0.9975338706911335
+    },
+    "ext_agentdojo": {
+     "recall": 0.5218934911242603,
+     "recall_ci": [
+      0.4893585208184872,
+      0.5558228000226219
+     ],
+     "seeds": 1,
+     "fpr": 0.005917159763313609,
+     "fpr_ci": [
+      0.0,
+      0.02
+     ],
+     "auroc": 0.9143517383845103
+    },
+    "ext_injecagent": {
+     "recall": 0.6261859582542695,
+     "recall_ci": [
+      0.6043318992264096,
+      0.6476788654064359
+     ],
+     "seeds": 1,
+     "fpr": 0.011764705882352941,
+     "fpr_ci": [
+      0.0027929081315952826,
+      0.024848602484472043
+     ],
+     "auroc": 0.9263338542248017
+    },
+    "test_synth_ood_carrier": {
+     "recall": 0.2381786339754816,
+     "recall_ci": [
+      0.20323668872388723,
+      0.2749079075842305
+     ],
+     "seeds": 1,
+     "fpr": 0.06830122591943957,
+     "fpr_ci": [
+      0.04917492513352474,
+      0.08932420641646108
+     ],
+     "auroc": 0.6663318417008903
+    },
+    "test_bipia": {
+     "recall": 0.6835205992509363,
+     "recall_ci": [
+      0.6439114391143912,
+      0.7216136550589526
+     ],
+     "seeds": 1,
+     "fpr": 0.011235955056179775,
+     "fpr_ci": [
+      0.0,
+      0.028743985565356848
+     ],
+     "auroc": 0.9536937676219333
+    },
+    "test_synth_ood_style": {
+     "recall": 0.13452914798206278,
+     "recall_ci": [
+      0.11044784927434867,
+      0.16101787974290888
+     ],
+     "seeds": 1,
+     "fpr": 0.025411061285500747,
+     "fpr_ci": [
+      0.01395187338501292,
+      0.037317628499183235
+     ],
+     "auroc": 0.7046950024689371
+    }
+   },
+   "threshold": "fpr1"
+  },
+  {
+   "label": "DistilRoBERTa, + synthetic (ours) (2 seeds)",
+   "splits": {
+    "test_synth_ood_both": {
+     "recall": 0.8263888888888888,
+     "recall_ci": [
+      0.728538961038961,
+      0.9178107748926599
+     ],
+     "seeds": 2,
+     "recall_sd": 0.04910463758239919,
+     "fpr": 0.08680555555555555,
+     "fpr_ci": [
+      0.02255218269554483,
+      0.16672077922077916
+     ],
+     "fpr_sd": 0.034373246307679385,
+     "auroc": 0.9437090084876544
+    },
+    "test_promptshield": {
+     "recall": 0.6417572463768115,
+     "recall_ci": [
+      0.5983344563399965,
+      0.6860795813048359
+     ],
+     "seeds": 2,
+     "recall_sd": 0.021136344002858732,
+     "fpr": 0.08983697537287548,
+     "fpr_ci": [
+      0.07199287186274332,
+      0.10968521622953897
+     ],
+     "fpr_sd": 0.012263385036187083,
+     "auroc": 0.8476437022123693
+    },
+    "test_synth_id": {
+     "recall": 0.9692028985507246,
+     "recall_ci": [
+      0.9365628790675598,
+      0.9928831932561016
+     ],
+     "seeds": 2,
+     "recall_sd": 0.012809905456278014,
+     "fpr": 0.0036231884057971015,
+     "fpr_ci": [
+      0.0,
+      0.011194029850746268
+     ],
+     "fpr_sd": 0.0,
+     "auroc": 0.9981293320730938
+    },
+    "test_hardneg": {
+     "recall": null,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "seeds": 2,
+     "recall_sd": null,
+     "fpr": 0.09541984732824427,
+     "fpr_ci": [
+      0.04198473282442748,
+      0.15648854961832062
+     ],
+     "fpr_sd": 0.03238657013068157,
+     "auroc": null
+    },
+    "test_public": {
+     "recall": 0.9745098039215686,
+     "recall_ci": [
+      0.9627450001956871,
+      0.9846552852233208
+     ],
+     "seeds": 2,
+     "recall_sd": 0.0046216129489316665,
+     "fpr": 0.009037900874635569,
+     "fpr_ci": [
+      0.003972924737352528,
+      0.015652435830277634
+     ],
+     "fpr_sd": 0.0020615358052085936,
+     "auroc": 0.9969725032870291
+    },
+    "ext_agentdojo": {
+     "recall": 0.9272189349112425,
+     "recall_ci": [
+      0.8900706109244744,
+      0.961131885262939
+     ],
+     "seeds": 2,
+     "recall_sd": 0.02594119552282011,
+     "fpr": 0.05325443786982249,
+     "fpr_ci": [
+      0.021270996640537512,
+      0.08875739644970414
+     ],
+     "fpr_sd": 0.0,
+     "auroc": 0.9850530443611918
+    },
+    "ext_injecagent": {
+     "recall": 0.6271347248576851,
+     "recall_ci": [
+      0.567665846197964,
+      0.68492384578772
+     ],
+     "seeds": 2,
+     "recall_sd": 0.051657706025962244,
+     "fpr": 0.03823529411764706,
+     "fpr_ci": [
+      0.014450867052023121,
+      0.07077053824362606
+     ],
+     "fpr_sd": 0.012478354962115544,
+     "auroc": 0.897921084942516
+    },
+    "test_synth_ood_carrier": {
+     "recall": 0.9868651488616462,
+     "recall_ci": [
+      0.9755226156821901,
+      0.99640352004111
+     ],
+     "seeds": 2,
+     "recall_sd": 0.001238365641307424,
+     "fpr": 0.06304728546409807,
+     "fpr_ci": [
+      0.010524481936548688,
+      0.13012686608734403
+     ],
+     "fpr_sd": 0.05696481950014218,
+     "auroc": 0.9953349425379016
+    },
+    "test_bipia": {
+     "recall": 0.9138576779026217,
+     "recall_ci": [
+      0.8554995210866978,
+      0.9632530569500192
+     ],
+     "seeds": 2,
+     "recall_sd": 0.04237344007110392,
+     "fpr": 0.0955056179775281,
+     "fpr_ci": [
+      0.011903000845308537,
+      0.20625679347826084
+     ],
+     "fpr_sd": 0.07945020013331995,
+     "auroc": 0.973774881117704
+    },
+    "test_synth_ood_style": {
+     "recall": 0.7623318385650224,
+     "recall_ci": [
+      0.7155577611297229,
+      0.8104808680020544
+     ],
+     "seeds": 2,
+     "recall_sd": 0.02113921617897004,
+     "fpr": 0.002242152466367713,
+     "fpr_ci": [
+      0.0,
+      0.007599073341568241
+     ],
+     "fpr_sd": 0.0010569608089485015,
+     "auroc": 0.9688913913410686
+    }
+   },
+   "threshold": "fpr1"
+  },
+  {
+   "label": "MiniLM-L12, + synthetic (ours, browser model)",
+   "splits": {
+    "test_synth_ood_both": {
+     "recall": 0.875,
+     "recall_ci": [
+      0.8168689441614224,
+      0.9303894839337877
+     ],
+     "seeds": 1,
+     "fpr": 0.013888888888888888,
+     "fpr_ci": [
+      0.0,
+      0.03521751073818799
+     ],
+     "auroc": 0.9630594135802469
+    },
+    "test_promptshield": {
+     "recall": 0.5887681159420289,
+     "recall_ci": [
+      0.5581055981728197,
+      0.6188811474601834
+     ],
+     "seeds": 1,
+     "fpr": 0.11966701352757544,
+     "fpr_ci": [
+      0.10801486234038125,
+      0.13164583501239474
+     ],
+     "auroc": 0.8425031544234819
+    },
+    "test_synth_id": {
+     "recall": 0.9746376811594203,
+     "recall_ci": [
+      0.9561963288965222,
+      0.992280202776386
+     ],
+     "seeds": 1,
+     "fpr": 0.007246376811594203,
+     "fpr_ci": [
+      0.0,
+      0.01845018450184502
+     ],
+     "auroc": 0.9959173492963663
+    },
+    "test_hardneg": {
+     "recall": null,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "seeds": 1,
+     "fpr": 0.07251908396946564,
+     "fpr_ci": [
+      0.04580152671755725,
+      0.10305343511450382
+     ],
+     "auroc": null
+    },
+    "test_public": {
+     "recall": 0.9784313725490196,
+     "recall_ci": [
+      0.9714267527507502,
+      0.9854694356629244
+     ],
+     "seeds": 1,
+     "fpr": 0.015160349854227406,
+     "fpr_ci": [
+      0.009445100354191263,
+      0.02078612101402912
+     ],
+     "auroc": 0.997638674517426
+    },
+    "ext_agentdojo": {
+     "recall": 0.8035502958579882,
+     "recall_ci": [
+      0.7762016582475783,
+      0.8298400172954276
+     ],
+     "seeds": 1,
+     "fpr": 0.03550295857988166,
+     "fpr_ci": [
+      0.006752311522048365,
+      0.06521739130434782
+     ],
+     "auroc": 0.9662336752914814
+    },
+    "ext_injecagent": {
+     "recall": 0.5806451612903226,
+     "recall_ci": [
+      0.5576188274740906,
+      0.6018172177934735
+     ],
+     "seeds": 1,
+     "fpr": 0.01764705882352941,
+     "fpr_ci": [
+      0.005714285714285714,
+      0.03226282234275382
+     ],
+     "auroc": 0.8682735238307847
+    },
+    "test_synth_ood_carrier": {
+     "recall": 0.989492119089317,
+     "recall_ci": [
+      0.9802822823698691,
+      0.9966782890913676
+     ],
+     "seeds": 1,
+     "fpr": 0.014010507880910683,
+     "fpr_ci": [
+      0.0051635111876075735,
+      0.02456248265655351
+     ],
+     "auroc": 0.9969421023736279
+    },
+    "test_bipia": {
+     "recall": 0.9456928838951311,
+     "recall_ci": [
+      0.9250936329588015,
+      0.9644277271684977
+     ],
+     "seeds": 1,
+     "fpr": 0.02247191011235955,
+     "fpr_ci": [
+      0.005206330128205128,
+      0.04706036341238066
+     ],
+     "auroc": 0.9887114421579767
+    },
+    "test_synth_ood_style": {
+     "recall": 0.8310911808669657,
+     "recall_ci": [
+      0.7990231259968101,
+      0.8603980268638303
+     ],
+     "seeds": 1,
+     "fpr": 0.0014947683109118087,
+     "fpr_ci": [
+      0.0,
+      0.004658566212339287
+     ],
+     "auroc": 0.9675977129374544
+    }
+   },
+   "threshold": "fpr1"
+  }
+ ],
+ "figures": [
+  {
+   "title": "Recall by evaluation set",
+   "src": "fig/recall.png",
+   "caption": "Same operating point for every detector: the threshold that gives 1% false positives on the validation split."
+  },
+  {
+   "title": "Recall per attack style (synthetic test sets)",
+   "src": "fig/styles.png",
+   "caption": "Right-hand four styles are never seen in training. Threshold: 1% val FPR."
+  }
+ ],
+ "agent": {
+  "rows": [
+   {
+    "mode": "none (threshold fpr1)",
+    "asr": "0.8",
+    "ub": "90.0",
+    "ua": "93.3",
+    "flag": "0.0"
+   },
+   {
+    "mode": "block (threshold fpr1)",
+    "asr": "0.8",
+    "ub": "90.0",
+    "ua": "55.0",
+    "flag": "2.5"
+   },
+   {
+    "mode": "redact (threshold fpr1)",
+    "asr": "0.0",
+    "ub": "90.0",
+    "ua": "89.2",
+    "flag": "2.5"
+   },
+   {
+    "mode": "none (threshold t0.5)",
+    "asr": "0.8",
+    "ub": "90.0",
+    "ua": "93.3",
+    "flag": "0.0"
+   },
+   {
+    "mode": "block (threshold t0.5)",
+    "asr": "0.8",
+    "ub": "90.0",
+    "ua": "53.3",
+    "flag": "1.2"
+   },
+   {
+    "mode": "redact (threshold t0.5)",
+    "asr": "0.0",
+    "ub": "90.0",
+    "ua": "89.2",
+    "flag": "1.2"
+   }
+  ],
+  "note": "gemma-4-26b-a4b-it: 120 InjecAgent attack cases (30 each of direct-harm/data-stealing x base/enhanced) and 80 benign tool outputs. gemma-4-26b-a4b-it: 120 InjecAgent attack cases (30 each of direct-harm/data-stealing x base/enhanced) and 80 benign tool outputs. "
+ }
+}

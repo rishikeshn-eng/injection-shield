@@ -22,11 +22,16 @@ def main():
     frags = rng.sample(frags, min(3000, len(frags)))
     out = {}
     for name in sys.argv[1:] or ["distilroberta-s0", "minilm-s0"]:
-        path = os.path.join(ROOT, "models", name)
-        thr = json.load(open(os.path.join(path, "thresholds.json")))["fpr1"]
-        tok = AutoTokenizer.from_pretrained(path)
-        model = AutoModelForSequenceClassification.from_pretrained(path).to(device())
-        s = score_texts(model, tok, frags)
+        if name == "onnx":  # shipped int8 browser model on CPU
+            from common import OnnxScorer
+            sc = OnnxScorer()
+            thr, tok, s, model = sc.thresholds["fpr1"], sc.tok, sc(frags), None
+        else:
+            path = os.path.join(ROOT, "models", name)
+            thr = json.load(open(os.path.join(path, "thresholds.json")))["fpr1"]
+            tok = AutoTokenizer.from_pretrained(path)
+            model = AutoModelForSequenceClassification.from_pretrained(path).to(device())
+            s = score_texts(model, tok, frags)
         n_tok = np.array([len(tok(f)["input_ids"]) for f in frags])
         res = {"threshold": thr, "n": len(frags), "flag_rate_all": float((s >= thr).mean())}
         for lo, hi in [(0, 8), (8, 16), (16, 32), (32, 64), (64, 10**6)]:
@@ -35,10 +40,11 @@ def main():
             res[f"n_tokens_{lo}_{hi}"] = int(m.sum())
         out[name] = res
         print(name, json.dumps(res))
-        del model
-        import torch
-        if torch.backends.mps.is_available():
-            torch.mps.empty_cache()
+        if model is not None:
+            del model
+            import torch
+            if torch.backends.mps.is_available():
+                torch.mps.empty_cache()
     json.dump(out, open(os.path.join(RESULTS, "diag_fragments.json"), "w"), indent=1)
 
 

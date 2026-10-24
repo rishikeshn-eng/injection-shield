@@ -1,5 +1,26 @@
+[agent] 50/341 0s
+[agent] 100/341 0s
+[agent] 150/341 0s
+[agent] 200/341 0s
+[agent] 250/341 0s
+[agent] 300/341 0s
+[agent] 341/341 0s
+agent errors: 0
+[gemini gemma-4-26b-a4b-it] 429 hint b'42.8502774': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-26b-a4b-it] 429 hint b'37.785462637': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
 [gemini gemma-4-26b-a4b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
-[gemini gemma-4-26b-a4b-it] 429 hint b'43.665139934': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
-[gemini gemma-4-26b-a4b-it] 429 hint b'41.342333676': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-26b-a4b-it] 429 hint b'30.443214622': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-26b-a4b-it] 429 hint b'29.402515708': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-26b-a4b-it] 429 hint b'37.819822537': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-26b-a4b-it] 429 hint b'34.476206032': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[utility-judge] 50/75 196s
+[gemini gemma-4-26b-a4b-it] 429 hint b'31.999819773': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-26b-a4b-it] 429 hint b'31.435272591': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
 [gemini gemma-4-26b-a4b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
-[agent] 50/520 134s
+[gemini gemma-4-26b-a4b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-26b-a4b-it] 429 hint b'25.568886532': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-26b-a4b-it] 429 hint b'23.946917737': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[utility-judge] 75/75 327s
+none    ASR=0.008 utility(benign)=0.900 utility(attack)=0.933 benign_flag=0.000
+block   ASR=0.008 utility(benign)=0.900 utility(attack)=0.533 benign_flag=0.013
+redact  ASR=0.000 utility(benign)=0.900 utility(attack)=0.892 benign_flag=0.013

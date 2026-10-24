@@ -53,7 +53,29 @@ def judge_batch(batch):
     return [got.get(i, float("nan")) for i in range(len(batch))]
 
 
+def from_saved():
+    """Rebuild metrics/llm-judge.json from the per-split subsample files already written (partial runs)."""
+    sub_dir = os.path.join(RESULTS, "judge_subsample")
+    res = {"thresholds": {"t0.5": 0.5}, "splits": {}, "model": JUDGE, "partial": True}
+    for split in EVAL_SPLITS:
+        f = os.path.join(sub_dir, f"{split}.jsonl")
+        if not os.path.exists(f):
+            continue
+        rows = [json.loads(l) for l in open(f)]
+        s = np.array([r["judge"] if r["judge"] is not None else float("nan") for r in rows], dtype=float)
+        y = np.array([r["label"] for r in rows])
+        ok = ~np.isnan(s)
+        if ok.sum() == 0:  # e.g. leftovers of a quota-failed run
+            continue
+        res["splits"][split] = metrics(y[ok], s[ok], res["thresholds"])
+        res["splits"][split]["n_failed"] = int((~ok).sum())
+    json.dump(res, open(os.path.join(RESULTS, "metrics", "llm-judge.json"), "w"), indent=1)
+    print("splits:", list(res["splits"]))
+
+
 def main():
+    if "--from-saved" in sys.argv:
+        return from_saved()
     rng = random.Random(0)
     res = {"thresholds": {"t0.5": 0.5}, "splits": {}, "model": JUDGE}
     sub_dir = os.path.join(RESULTS, "judge_subsample")

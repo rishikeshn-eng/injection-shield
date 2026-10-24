@@ -229,3 +229,89 @@ W1024 19:37:50.455000 26535 torch/distributed/elastic/multiprocessing/redirects.
   warnings.warn(
 Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 7711.10it/s]
 test_public                n= 3245 auroc=0.974 t0.5: R=0.797 FPR=0.004 P=0.994 fpr1: R=0.668 FPR=0.002 P=0.996
+test_bipia                 n=  712 auroc=0.407 t0.5: R=0.182 FPR=0.197 P=0.735 fpr1: R=0.071 FPR=0.084 P=0.717
+test_promptshield          n= 3987 auroc=0.716 t0.5: R=0.048 FPR=0.015 P=0.546 fpr1: R=0.017 FPR=0.003 P=0.704
+test_synth_id              n=  552 auroc=0.681 t0.5: R=0.341 FPR=0.130 P=0.723 fpr1: R=0.163 FPR=0.014 P=0.918
+test_synth_ood_style       n= 1338 auroc=0.678 t0.5: R=0.360 FPR=0.176 P=0.671 fpr1: R=0.115 FPR=0.024 P=0.828
+test_synth_ood_carrier     n= 1142 auroc=0.678 t0.5: R=0.263 FPR=0.053 P=0.833 fpr1: R=0.079 FPR=0.005 P=0.938
+test_synth_ood_both        n=  288 auroc=0.693 t0.5: R=0.215 FPR=0.000 P=1.000 fpr1: R=0.069 FPR=0.000 P=1.000
+test_hardneg               n=  262 auroc=nan t0.5: R=nan FPR=0.210 P=0.000 fpr1: R=nan FPR=0.080 P=0.000
+ext_injecagent             n= 2448 auroc=0.832 t0.5: R=0.821 FPR=0.353 P=0.935 fpr1: R=0.511 FPR=0.009 P=0.997
+ext_agentdojo              n= 1014 auroc=0.801 t0.5: R=0.680 FPR=0.266 P=0.927 fpr1: R=0.351 FPR=0.059 P=0.967
+W1024 19:55:45.679000 35700 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 7984.18it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: distilbert/distilroberta-base
+Key                         | Status     | 
+----------------------------+------------+-
+lm_head.bias                | UNEXPECTED | 
+lm_head.layer_norm.bias     | UNEXPECTED | 
+roberta.pooler.dense.bias   | UNEXPECTED | 
+lm_head.dense.weight        | UNEXPECTED | 
+roberta.pooler.dense.weight | UNEXPECTED | 
+lm_head.dense.bias          | UNEXPECTED | 
+lm_head.layer_norm.weight   | UNEXPECTED | 
+classifier.out_proj.weight  | MISSING    | 
+classifier.dense.bias       | MISSING    | 
+classifier.dense.weight     | MISSING    | 
+classifier.out_proj.bias    | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+train docs=24497 windows=28199 pos=12345 neg=15854
+step 200/3526 loss 0.1258 118s
+step 400/3526 loss 0.0486 242s
+step 600/3526 loss 0.0037 375s
+step 800/3526 loss 0.0023 507s
+step 1000/3526 loss 0.4282 630s
+step 1200/3526 loss 0.0033 756s
+step 1400/3526 loss 0.1223 867s
+step 1600/3526 loss 0.2114 987s
+step 1800/3526 loss 0.0047 1110s
+step 2000/3526 loss 0.0006 1225s
+step 2200/3526 loss 0.0004 1344s
+step 2400/3526 loss 0.0002 1470s
+step 2600/3526 loss 0.0002 1600s
+step 2800/3526 loss 0.0002 1731s
+step 3000/3526 loss 0.0001 1854s
+step 3200/3526 loss 0.0168 1983s
+step 3400/3526 loss 0.0006 2100s
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.09it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.09it/s]
+val {"n": 2383, "pos": 1495, "auroc": 0.9992188676971285, "auroc_ci": [NaN, NaN], "t0.5": {"precision": 0.9938941655359566, "recall": 0.979933110367893, "fpr": 0.010135135135135136, "f1": 0.9868642640619737, "tp": 1465, "fp": 9, "fn": 30, "tn": 879, "threshold": 0.5, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}, "fpr1": {"precision": 0.9945652173913043, "recall": 0.9792642140468227, "fpr": 0.009009009009009009, "f1": 0.9868554095045501, "tp": 1464, "fp": 8, "fn": 31, "tn": 880, "threshold": 0.6180523501167298, "recall_ci": [NaN, NaN], "fpr_ci": [NaN, NaN]}}
+saved /Users/rishikesh/ai-safety-portfolio/injection-shield/models/distilroberta-s1
+W1024 20:32:56.991000 54756 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 8412.97it/s]
+test_public                n= 3245 auroc=0.997 t0.5: R=0.972 FPR=0.008 P=0.991 fpr1: R=0.971 FPR=0.008 P=0.991
+test_bipia                 n=  712 auroc=0.973 t0.5: R=0.891 FPR=0.045 P=0.983 fpr1: R=0.884 FPR=0.039 P=0.985
+test_promptshield          n= 3987 auroc=0.857 t0.5: R=0.630 FPR=0.085 P=0.740 fpr1: R=0.627 FPR=0.081 P=0.747
+test_synth_id              n=  552 auroc=0.999 t0.5: R=0.960 FPR=0.004 P=0.996 fpr1: R=0.960 FPR=0.004 P=0.996
+test_synth_ood_style       n= 1338 auroc=0.969 t0.5: R=0.750 FPR=0.001 P=0.998 fpr1: R=0.747 FPR=0.001 P=0.998
+test_synth_ood_carrier     n= 1142 auroc=0.997 t0.5: R=0.986 FPR=0.023 P=0.977 fpr1: R=0.986 FPR=0.023 P=0.977
+test_synth_ood_both        n=  288 auroc=0.938 t0.5: R=0.799 FPR=0.062 P=0.927 fpr1: R=0.792 FPR=0.062 P=0.927
+test_hardneg               n=  262 auroc=nan t0.5: R=nan FPR=0.073 P=0.000 fpr1: R=nan FPR=0.073 P=0.000
+ext_injecagent             n= 2448 auroc=0.910 t0.5: R=0.670 FPR=0.050 P=0.988 fpr1: R=0.664 FPR=0.047 P=0.989
+ext_agentdojo              n= 1014 auroc=0.981 t0.5: R=0.914 FPR=0.053 P=0.988 fpr1: R=0.909 FPR=0.053 P=0.988
+W1024 20:36:56.275000 56763 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/101 [00:00<?, ?it/s]Loading weights: 100%|██████████| 101/101 [00:00<00:00, 7562.70it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: distilbert/distilroberta-base
+Key                         | Status     | 
+----------------------------+------------+-
+lm_head.dense.weight        | UNEXPECTED | 
+lm_head.bias                | UNEXPECTED | 
+lm_head.layer_norm.weight   | UNEXPECTED | 
+lm_head.dense.bias          | UNEXPECTED | 
+lm_head.layer_norm.bias     | UNEXPECTED | 
+roberta.pooler.dense.bias   | UNEXPECTED | 
+roberta.pooler.dense.weight | UNEXPECTED | 
+classifier.dense.bias       | MISSING    | 
+classifier.out_proj.bias    | MISSING    | 
+classifier.dense.weight     | MISSING    | 
+classifier.out_proj.weight  | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+train docs=24497 windows=28199 pos=12345 neg=15854
+Terminated: 15
+/Users/rishikesh/.local/share/uv/python/cpython-3.11.17-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

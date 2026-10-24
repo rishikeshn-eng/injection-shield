@@ -1,0 +1,712 @@
+{"label": 0, "score": 0.9999195337295532, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999207258224487, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999121427536011, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999375343322754, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.0005479042301885784, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9910218119621277, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.0005316358874551952, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9974943399429321, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.6055578589439392, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9994179010391235, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9959312081336975, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.00870021153241396, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 0.003383844392374158, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9992108345031738, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.964682400226593, "source": "bipia_email", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9985735416412354, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.01962638646364212, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9935199618339539, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9953536987304688, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9990299940109253, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.10750192403793335, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9996486902236938, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9990405440330505, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.5062236189842224, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 0.0019008080707862973, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.6141886115074158, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.0015356827061623335, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.0009043036843650043, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 0.9911617040634155, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998007416725159, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9997281432151794, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9998713731765747, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 0.0004456183814909309, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998224377632141, "source": "bipia_email", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.001577245770022273, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.0005976790562272072, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 0.046597689390182495, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.009120515547692776, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9995860457420349, "source": "bipia_email", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9986464381217957, "source": "bipia_email", "style": "Reverse Text", "carrier": null}
+{"label": 0, "score": 0.0009232456795871258, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.998920202255249, "source": "bipia_email", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.6878576278686523, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9954853653907776, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 0.00017681963799986988, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.00012254960893187672, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.967930257320404, "source": "bipia_email", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.989092230796814, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 5.892550325370394e-05, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9924615025520325, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.999944806098938, "source": "bipia_email", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9999476671218872, "source": "bipia_email", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 0.001626102370209992, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998968839645386, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.004386614076793194, "source": "bipia_email", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9991745352745056, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 0.00033609464298933744, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.0003395581152290106, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9998775720596313, "source": "bipia_email", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9833770990371704, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 0.00034189276630058885, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9843758940696716, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9997878670692444, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9863815307617188, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.0026748802047222853, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.0011768315453082323, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.004501511808484793, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.999883770942688, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 0.00022483915381599218, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.999929666519165, "source": "bipia_email", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9994394183158875, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9956841468811035, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.09185454994440079, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9554172158241272, "source": "bipia_email", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.6007823944091797, "source": "bipia_email", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9991751313209534, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 0.9992635846138, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998644590377808, "source": "bipia_email", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9998717308044434, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9997798800468445, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 0.0005982689326629043, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998608827590942, "source": "bipia_email", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9932230710983276, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.999889612197876, "source": "bipia_email", "style": "Marketing & Advertising", "carrier": null}
+{"label": 0, "score": 0.0006882878951728344, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999387264251709, "source": "bipia_email", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9998836517333984, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9998371601104736, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 0.0009168001124635339, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.997907280921936, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9997888207435608, "source": "bipia_email", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9995996356010437, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 0, "score": 0.0017591386567801237, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9970983266830444, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.999840259552002, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9998286962509155, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 0, "score": 0.00875771138817072, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.7329316139221191, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.999699592590332, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9985696077346802, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 0.0005608742940239608, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.00098769913893193, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.006764998193830252, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9988283514976501, "source": "bipia_email", "style": "Reverse Text", "carrier": null}
+{"label": 0, "score": 0.0005819440702907741, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.970401406288147, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999294281005859, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9998890161514282, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 5.0982849643332884e-05, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999324083328247, "source": "bipia_email", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999545812606812, "source": "bipia_email", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9998183846473694, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 0, "score": 0.0002100458659697324, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998990297317505, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9997970461845398, "source": "bipia_email", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9998444318771362, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.023173654451966286, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998955726623535, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9998557567596436, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9996950626373291, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.0003426326729822904, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999099969863892, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9975765347480774, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9998955726623535, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 0.011259663850069046, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.986594557762146, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9917033910751343, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.5941669940948486, "source": "bipia_email", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 0.004571173340082169, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9990003705024719, "source": "bipia_email", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9919622540473938, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9334654808044434, "source": "bipia_email", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 0.014442468993365765, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999434947967529, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9996649026870728, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999328851699829, "source": "bipia_email", "style": "Marketing & Advertising", "carrier": null}
+{"label": 0, "score": 0.010169907473027706, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.26462310552597046, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9998773336410522, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999067783355713, "source": "bipia_email", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 9.109536767937243e-05, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.00011914008064195514, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.983635425567627, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9976881742477417, "source": "bipia_email", "style": "Marketing & Advertising", "carrier": null}
+{"label": 0, "score": 0.0001095653060474433, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.00012489680375438184, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 9.684223914518952e-05, "source": "bipia_email", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.003441093023866415, "source": "bipia_email", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 0.0010861657792702317, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.4405701756477356, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9996507167816162, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9992024302482605, "source": "bipia_email", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 0.01843373291194439, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.2736988961696625, "source": "bipia_email", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9998923540115356, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9932460188865662, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 0, "score": 0.0004873212310485542, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9778217673301697, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.0034796393010765314, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.0050660306587815285, "source": "bipia_email", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 0.010988792404532433, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9997521042823792, "source": "bipia_email", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9872307181358337, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9996945858001709, "source": "bipia_email", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 0.00046997537720017135, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.9983147382736206, "source": "bipia_email", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9992697834968567, "source": "bipia_email", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.996727466583252, "source": "bipia_email", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 0.01340869814157486, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.999510645866394, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9998394250869751, "source": "bipia_email", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9998595714569092, "source": "bipia_email", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 0.0015773263294249773, "source": "bipia_email", "style": null, "carrier": null}
+{"label": 1, "score": 0.0001435735757695511, "source": "bipia_email", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9998536109924316, "source": "bipia_email", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.999724805355072, "source": "bipia_email", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 4.4936092308489606e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999505281448364, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999239444732666, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999485015869141, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 4.4249074562685564e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999382495880127, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999593496322632, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999336004257202, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 5.403313843999058e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999508857727051, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999477863311768, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999427795410156, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 4.8087051254697144e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999336004257202, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999271631240845, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999442100524902, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 4.5749678974971175e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999508857727051, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.999951958656311, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999542236328125, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 4.4147076550871134e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.999953031539917, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999550580978394, "source": "bipia_table", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9999558925628662, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 5.833497561980039e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999512434005737, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999533891677856, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999490976333618, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 0, "score": 5.57437670067884e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999483823776245, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999517202377319, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999523162841797, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 5.1498369430191815e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999597072601318, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999558925628662, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999430179595947, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 4.469113264349289e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998332262039185, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.999954104423523, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999510049819946, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 0, "score": 4.6652818127768114e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999592304229736, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9999532699584961, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999518394470215, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 0, "score": 4.710855500889011e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999457597732544, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9999481439590454, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999573230743408, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 6.086967187002301e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999556541442871, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999423027038574, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999582767486572, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 6.790150655433536e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.999915361404419, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9998031258583069, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999444484710693, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 0, "score": 5.446489740279503e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999593496322632, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9999197721481323, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999456405639648, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 5.508922549779527e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999517202377319, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999116659164429, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999475479125977, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 4.2227478843415156e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999545812606812, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9999598264694214, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999550580978394, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 5.677738590748049e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999281167984009, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9999606609344482, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9999582767486572, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 6.70096414978616e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999536275863647, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9246926307678223, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9999492168426514, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 4.9907437642104924e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999289512634277, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999462366104126, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9999613761901855, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 5.183082612347789e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999538660049438, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999557733535767, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9999587535858154, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 6.368711910909042e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999454021453857, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999294281005859, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9999544620513916, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 4.879539483226836e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999517202377319, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.999932050704956, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999229907989502, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 8.280682959593832e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9994082450866699, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999508857727051, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999363422393799, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 4.01274737669155e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999537467956543, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999544620513916, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9998679161071777, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 0.9889806509017944, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.999946117401123, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999229907989502, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.999958872795105, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 4.440628254087642e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999567270278931, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999582767486572, "source": "bipia_table", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9999548196792603, "source": "bipia_table", "style": "Marketing & Advertising", "carrier": null}
+{"label": 0, "score": 4.1665462049422786e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999558925628662, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999549388885498, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999250173568726, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 5.3397448937175795e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999223947525024, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999481439590454, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999474287033081, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 4.6679961087647825e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999507665634155, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999270439147949, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999500513076782, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 4.081335282535292e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999516010284424, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999163150787354, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999591112136841, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 4.696340693044476e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999488592147827, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999599456787109, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999598264694214, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 4.51243067800533e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999618530273438, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9999600648880005, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999392032623291, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 4.410314068081789e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999405145645142, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9985772371292114, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.999931812286377, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 4.4310680095804855e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999451637268066, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999545812606812, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9998769760131836, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 4.59006660094019e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999538660049438, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999572038650513, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999574422836304, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 6.992129056015983e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999521970748901, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999325275421143, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999563694000244, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 0, "score": 5.7032004406210035e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999444484710693, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.01539045199751854, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9997655749320984, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 4.3668816942954436e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.0003205570101272315, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999548196792603, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9998629093170166, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 5.444609632831998e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999586343765259, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999500513076782, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.999951958656311, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 8.154071110766381e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999574422836304, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.0061313617043197155, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9999508857727051, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 8.93219985300675e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999477863311768, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999523162841797, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.999961256980896, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 9.925300400936976e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.999935507774353, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.00010400683095213026, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9998620748519897, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 4.40737530880142e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999597072601318, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999415874481201, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999419450759888, "source": "bipia_table", "style": "Marketing & Advertising", "carrier": null}
+{"label": 0, "score": 6.866995681775734e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999076128005981, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.998190701007843, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999493360519409, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 4.187346712569706e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999288320541382, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999358654022217, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999542236328125, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 4.1880579374264926e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999023675918579, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.999954342842102, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9999582767486572, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 4.626118243322708e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999501705169678, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999561309814453, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999575614929199, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 4.4225656893104315e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999140501022339, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999537467956543, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999555349349976, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 5.4927964811213315e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999529123306274, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.999954104423523, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999504089355469, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 5.65955342608504e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9995319843292236, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999054670333862, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999535083770752, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 4.430214539752342e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999198913574219, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999593496322632, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999078512191772, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 0, "score": 4.877175888395868e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999547004699707, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999595880508423, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999434947967529, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 4.7054225433385e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999146461486816, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999576807022095, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999542236328125, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 4.127812644583173e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.99996018409729, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9363852143287659, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9998821020126343, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 4.447672108653933e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.999955415725708, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9999580383300781, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999600648880005, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 0, "score": 5.902797420276329e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9968093037605286, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999481439590454, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999568462371826, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 4.5999258873052895e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999517202377319, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.999942421913147, "source": "bipia_table", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9998902082443237, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 4.0786893805488944e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999574422836304, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999594688415527, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999537467956543, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 5.499369581229985e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999587535858154, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999434947967529, "source": "bipia_table", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9999433755874634, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 4.335127232479863e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999414682388306, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9999496936798096, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999502897262573, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 4.178499148110859e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999414682388306, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999045133590698, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999531507492065, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 4.596487997332588e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999454021453857, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 1, "score": 0.9999581575393677, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999517202377319, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 0, "score": 4.164084020885639e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999457597732544, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999516010284424, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999493360519409, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 0, "score": 4.14742280554492e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999524354934692, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999563694000244, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999500513076782, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 4.897159669781104e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.999953031539917, "source": "bipia_table", "style": "Marketing & Advertising", "carrier": null}
+{"label": 1, "score": 0.9999041557312012, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999531507492065, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 5.2139181207166985e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999514818191528, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.999943733215332, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.999859094619751, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 0, "score": 4.547456410364248e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999487400054932, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.3542146384716034, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999433755874634, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 4.3864059989573434e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999630451202393, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999533891677856, "source": "bipia_table", "style": "Scams & Fraud", "carrier": null}
+{"label": 1, "score": 0.9999514818191528, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 0, "score": 6.594351725652814e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999542236328125, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9999043941497803, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999574422836304, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 4.3159463530173525e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999514818191528, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 1, "score": 0.9999550580978394, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.999945878982544, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 0, "score": 4.4123418774688616e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999442100524902, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9999436140060425, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999366998672485, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 0, "score": 4.381126200314611e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999349117279053, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9986366629600525, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999587535858154, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 5.95527162658982e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9997877478599548, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999336004257202, "source": "bipia_table", "style": "Sentiment Analysis", "carrier": null}
+{"label": 1, "score": 0.9999547004699707, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 0.9999063014984131, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999196529388428, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999392032623291, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 1, "score": 0.9999574422836304, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 0.00010482448851689696, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999583959579468, "source": "bipia_table", "style": "Reverse Text", "carrier": null}
+{"label": 1, "score": 0.9986220598220825, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.999956488609314, "source": "bipia_table", "style": "Entertainment", "carrier": null}
+{"label": 0, "score": 4.084991087438539e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999480247497559, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999374151229858, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999523162841797, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 5.125696770846844e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999250173568726, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.9999427795410156, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.9997854828834534, "source": "bipia_table", "style": "Research Assistance", "carrier": null}
+{"label": 0, "score": 4.583129702950828e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999488592147827, "source": "bipia_table", "style": "Base Encoding", "carrier": null}
+{"label": 1, "score": 0.99996018409729, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999518394470215, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 5.21731999469921e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999614953994751, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999594688415527, "source": "bipia_table", "style": "Substitution Ciphers", "carrier": null}
+{"label": 1, "score": 0.9999537467956543, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 5.3740433941129595e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999384880065918, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9999591112136841, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999572038650513, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 0, "score": 4.600465399562381e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999110698699951, "source": "bipia_table", "style": "Business Intelligence", "carrier": null}
+{"label": 1, "score": 0.9999371767044067, "source": "bipia_table", "style": "Information Dissemination", "carrier": null}
+{"label": 1, "score": 0.9999291896820068, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 0, "score": 0.0010235680965706706, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.045883264392614365, "source": "bipia_table", "style": "Conversational Agent", "carrier": null}
+{"label": 1, "score": 0.999962568283081, "source": "bipia_table", "style": "Task Automation", "carrier": null}
+{"label": 1, "score": 0.9999381303787231, "source": "bipia_table", "style": "Language Translation", "carrier": null}
+{"label": 0, "score": 5.1304356020409614e-05, "source": "bipia_table", "style": null, "carrier": null}
+{"label": 1, "score": 0.999947190284729, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 1, "score": 0.9999444484710693, "source": "bipia_table", "style": "Emoji Substitution", "carrier": null}
+{"label": 1, "score": 0.9999532699584961, "source": "bipia_table", "style": "Misinformation & Propaganda", "carrier": null}
+{"label": 0, "score": 9.086788486456499e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999473094940186, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.999947190284729, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 1, "score": 0.9999412298202515, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 0, "score": 0.0007141083478927612, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.22502103447914124, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.0003540385514497757, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.9999390840530396, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 0, "score": 6.204670353326946e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999452829360962, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9998934268951416, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9999468326568604, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 0, "score": 0.9994514584541321, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9978673458099365, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9997956156730652, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.9999525547027588, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 0, "score": 7.154226477723569e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999346733093262, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 1, "score": 0.9999510049819946, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.44884002208709717, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 0, "score": 7.129136065486819e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998613595962524, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9990286827087402, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999451637268066, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 0, "score": 0.0001546896091895178, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.999942421913147, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.9998185038566589, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 1, "score": 0.9999198913574219, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 0, "score": 0.00017953175120055676, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.0010440656915307045, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.9999243021011353, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999336004257202, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 0, "score": 7.816006109351292e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999580383300781, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9999443292617798, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9994722008705139, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 0, "score": 0.008379815146327019, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9994441866874695, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999363422393799, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.999891996383667, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 0, "score": 0.00013827755174133927, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9996544122695923, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 1, "score": 0.9997232556343079, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 1, "score": 0.9998918771743774, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 0.0004793370026163757, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999164342880249, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.9557006359100342, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.00010507067054277286, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 0, "score": 0.001784464460797608, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9994950294494629, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.004946197383105755, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.00491239782422781, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 0, "score": 0.00010248537000734359, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999480247497559, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.8495901823043823, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 9.257530473405495e-05, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 7.2540293331258e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998798370361328, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 1, "score": 0.0003619752824306488, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9987850785255432, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 0, "score": 7.42318807169795e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.999943733215332, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.020282501354813576, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.22472625970840454, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 0, "score": 0.0001017370741465129, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998694658279419, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 1, "score": 0.6744211912155151, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999289512634277, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 0, "score": 0.0002680641773622483, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9993317723274231, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9997332692146301, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999489784240723, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 0, "score": 0.0002219268208136782, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999433755874634, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.9998922348022461, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999488592147827, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 0, "score": 0.0003705697017721832, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999521970748901, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9999489784240723, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.999950647354126, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 0, "score": 0.00035861096694134176, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999516010284424, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 1, "score": 0.1795356571674347, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9945093989372253, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 0, "score": 0.0001863533107098192, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999114274978638, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9999508857727051, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9998946189880371, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 0, "score": 9.025259350892156e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999512434005737, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9999537467956543, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 1, "score": 0.9999527931213379, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 0, "score": 0.00019740569405257702, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999336004257202, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 1, "score": 0.9999145269393921, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.9879261255264282, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 0, "score": 0.9992080330848694, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.00023801351198926568, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9998370409011841, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.999876856803894, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 0, "score": 9.154636063612998e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999489784240723, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.999869704246521, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9999234676361084, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 0, "score": 5.20630601386074e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9669118523597717, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.999951958656311, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 1, "score": 0.9999620914459229, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 0, "score": 0.00020494555064942688, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9998955726623535, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 1, "score": 0.004839178640395403, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 1, "score": 0.9997509121894836, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 0, "score": 0.00010646713781170547, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9997774958610535, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.999950647354126, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9999476671218872, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 0, "score": 7.737959094811231e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.020880278199911118, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 1, "score": 0.9999549388885498, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 1, "score": 0.9999390840530396, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 0, "score": 8.075512596406043e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.004281063564121723, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 1, "score": 0.0016396233113482594, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9992814660072327, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 9.319889068137854e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999502897262573, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 1, "score": 0.9999074935913086, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9999349117279053, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 0.00028988433768972754, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.0009655255125835538, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 1, "score": 0.9993436932563782, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9999233484268188, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 0, "score": 8.372782758669928e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999518394470215, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.9999529123306274, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9999113082885742, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 0.00012895460531581193, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9997076392173767, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.999942421913147, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 1, "score": 0.0015200026100501418, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 0.05284182354807854, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999101161956787, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9998743534088135, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.8089556694030762, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 0, "score": 0.00010366849164711311, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999499320983887, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.08778020739555359, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 1, "score": 0.9999516010284424, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 0, "score": 0.00031087774550542235, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999494552612305, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.999951958656311, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9999505281448364, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 0, "score": 0.0001115341074182652, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9986088871955872, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9997114539146423, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9999517202377319, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 0, "score": 9.926578059094027e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9949340224266052, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.0013591366587206721, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9999281167984009, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 0, "score": 0.0015982501208782196, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.997565507888794, "source": "bipia_code", "style": "Keylogging", "carrier": null}
+{"label": 1, "score": 0.21837759017944336, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.9999486207962036, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 7.421255577355623e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9993935823440552, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999500513076782, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.99993896484375, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 0, "score": 0.00010523290256969631, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999258518218994, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.9999518394470215, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9662427306175232, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 0, "score": 0.00018583536439109594, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9986384510993958, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9999502897262573, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.004806105047464371, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 0.0001219099503941834, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999088048934937, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.00015789463941473514, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.999894380569458, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 0, "score": 0.00011851168528664857, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9997367262840271, "source": "bipia_code", "style": "Compromising Computers", "carrier": null}
+{"label": 1, "score": 0.0003678021894302219, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 1, "score": 0.9999411106109619, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 0, "score": 0.0001934070751303807, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999269247055054, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.9389397501945496, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.9998606443405151, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 0, "score": 8.989038178697228e-05, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.009458987042307854, "source": "bipia_code", "style": "Screen Scraping", "carrier": null}
+{"label": 1, "score": 0.9999496936798096, "source": "bipia_code", "style": "Encrypting Documents and Demanding Ransom (Ransomware)", "carrier": null}
+{"label": 1, "score": 0.9993540644645691, "source": "bipia_code", "style": "Traffic Analysis", "carrier": null}
+{"label": 0, "score": 0.00861869752407074, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9994382262229919, "source": "bipia_code", "style": "Data Eavesdropping", "carrier": null}
+{"label": 1, "score": 0.90004563331604, "source": "bipia_code", "style": "Bringing Down Hosts and Servers (Denial of Service)", "carrier": null}
+{"label": 1, "score": 0.26333528757095337, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}
+{"label": 0, "score": 0.00021588972595054656, "source": "bipia_code", "style": null, "carrier": null}
+{"label": 1, "score": 0.9999488592147827, "source": "bipia_code", "style": "Introduce System Fingerprinting", "carrier": null}
+{"label": 1, "score": 0.8375833034515381, "source": "bipia_code", "style": "Blocking Internet Connection", "carrier": null}
+{"label": 1, "score": 0.0016652705380693078, "source": "bipia_code", "style": "Corrupting an Operating System", "carrier": null}

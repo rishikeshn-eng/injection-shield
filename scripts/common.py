@@ -119,3 +119,38 @@ def save_scores(name, split, rows, scores):
         for r, s in zip(rows, scores):
             f.write(json.dumps({"label": r["label"], "score": float(s), "source": r["source"],
                                 "style": r.get("style"), "carrier": r.get("carrier")}) + "\n")
+
+
+class OnnxScorer:
+    """The shipped int8 ONNX model (site/model) on CPU via onnxruntime: same windowing / max rule as score_texts.
+    Not torch, so it needs no GPU lock; 4 intra-op threads to keep the shared laptop responsive."""
+
+    def __init__(self, path=os.path.join(ROOT, "site", "model", "injection-shield")):
+        import onnxruntime as ort
+        from transformers import AutoTokenizer
+        so = ort.SessionOptions()
+        so.intra_op_num_threads = 4
+        self.sess = ort.InferenceSession(os.path.join(path, "onnx", "model_quantized.onnx"), so,
+                                         providers=["CPUExecutionProvider"])
+        self.names = [i.name for i in self.sess.get_inputs()]
+        self.tok = AutoTokenizer.from_pretrained(path)
+        meta = json.load(open(os.path.join(os.path.dirname(path), "meta.json")))
+        self.thresholds = meta["thresholds"]
+
+    def __call__(self, texts, bs=16):
+        enc = windows(self.tok, texts)
+        doc, ids = list(enc["overflow_to_sample_mapping"]), enc["input_ids"]
+        order = sorted(range(len(ids)), key=lambda i: len(ids[i]))
+        probs = np.zeros(len(ids), dtype=np.float32)
+        for b in range(0, len(order), bs):
+            bi = order[b: b + bs]
+            batch = self.tok.pad({"input_ids": [ids[i] for i in bi]}, return_tensors="np")
+            feed = {n: batch[n].astype(np.int64) if n in batch else np.zeros_like(batch["input_ids"], dtype=np.int64)
+                    for n in self.names}
+            lo = self.sess.run(None, feed)[0]
+            e = np.exp(lo - lo.max(-1, keepdims=True))
+            probs[bi] = e[:, 1] / e.sum(-1)
+        out = np.zeros(len(texts), dtype=np.float32)
+        for i, d in enumerate(doc):
+            out[d] = max(out[d], probs[i])
+        return out

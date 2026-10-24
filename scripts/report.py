@@ -23,7 +23,7 @@ SPLIT_LABELS = {
 }
 RECALL_SPLITS = ["test_public", "test_bipia", "test_synth_id", "test_synth_ood_style", "test_synth_ood_carrier",
                  "test_synth_ood_both", "ext_injecagent", "ext_agentdojo"]
-FPR_SPLITS = ["test_public", "test_promptshield", "test_synth_id", "test_synth_ood_style", "test_hardneg",
+FPR_SPLITS = ["test_public", "test_promptshield", "test_synth_id", "test_synth_ood_style", "test_synth_ood_carrier", "test_hardneg",
               "ext_injecagent", "ext_agentdojo"]
 DETECTORS = [  # (metrics file stem or glob for seeds, label)
     ("keyword", "Keyword rules"),
@@ -109,7 +109,7 @@ def main():
 
     # ---- figure 1: recall at 1% FPR, grouped bars ----
     show = [l for l in table if "LLM judge" not in l]
-    fig, ax = plt.subplots(figsize=(11, 4.2))
+    fig, ax = plt.subplots(figsize=(11, 4.8))
     w = 0.8 / max(1, len(show))
     colors = ["#9aa0a6", "#e8710a", "#1a73e8", "#a142f4", "#12b5cb", "#f9ab00", "#d01884"]
     for i, l in enumerate(show):
@@ -120,7 +120,7 @@ def main():
     ax.set_xticklabels([SPLIT_LABELS[s] for s in RECALL_SPLITS], rotation=20, ha="right", fontsize=9)
     ax.set_ylabel("Recall at 1% val FPR")
     ax.set_ylim(0, 1.02)
-    ax.legend(fontsize=7.5, ncol=2, loc="lower left", framealpha=0.9)
+    ax.legend(fontsize=8, ncol=3, loc="lower center", bbox_to_anchor=(0.5, 1.01), frameon=False)
     ax.spines[["top", "right"]].set_visible(False)
     fig.tight_layout()
     fig.savefig(os.path.join(SITE, "fig", "recall.png"), dpi=150)
@@ -188,7 +188,9 @@ def main():
         for f in sorted(glob.glob(os.path.join(sub_dir, "*.jsonl"))):
             split = os.path.basename(f)[:-6]
             sub = [json.loads(l) for l in open(f)]
-            sub = [r for r in sub if r["judge"] == r["judge"]]
+            sub = [r for r in sub if r["judge"] is not None and r["judge"] == r["judge"]]
+            if not sub:
+                continue
             y = np.array([r["label"] for r in sub])
             js = np.array([r["judge"] for r in sub])
             jm = metrics(y, js, {"t": 0.5}, n_boot=0)["t"]
@@ -210,23 +212,23 @@ def main():
         a = json.load(open(f))
         md += [f"\n\n## End-to-end agent ({a['agent']}, shield {os.path.basename(a['model'])}, threshold "
                f"{a['threshold']} = {a['threshold_value']:.3f})\n",
-               "| Shield | Attack success ↓ | ASR direct-harm | ASR data-stealing | Utility benign ↑ | "
-               "Utility under attack ↑ | Benign flagged |", "|---|---:|---:|---:|---:|---:|---:|"]
+               "| Shield | Attack success ↓ | ASR base attacks | ASR enhanced attacks | Utility benign ↑ | "
+               "Utility under attack ↑ | Benign outputs flagged |", "|---|---:|---:|---:|---:|---:|---:|"]
         rows_a = []
         for mode, s in a["modes"].items():
             def f2(x):
                 return f"{pct(x['rate'])} [{pct(max(0, x['ci95'][0]))}–{pct(min(1, x['ci95'][1]))}] (n={x['n']})"
-            md.append(f"| {mode} | {f2(s['attack_success'])} | {pct(s['attack_success_dh']['rate'])} | "
-                      f"{pct(s['attack_success_ds']['rate'])} | {f2(s['utility_benign'])} | "
+            md.append(f"| {mode} | {f2(s['attack_success'])} | {pct(s['attack_success_base']['rate'])} | "
+                      f"{pct(s['attack_success_enhanced']['rate'])} | {f2(s['utility_benign'])} | "
                       f"{f2(s['utility_under_attack'])} | {pct(s['benign_flag_rate']['rate'])} |")
-            rows_a.append({"mode": f"{mode} ({a['agent']})", "asr": pct(s["attack_success"]["rate"]),
+            rows_a.append({"mode": f"{mode} (threshold {a['threshold']})", "asr": pct(s["attack_success"]["rate"]),
                            "ub": pct(s["utility_benign"]["rate"]), "ua": pct(s["utility_under_attack"]["rate"]),
                            "flag": pct(s["benign_flag_rate"]["rate"])})
         if agent is None:
             agent = {"rows": [], "note": ""}
         agent["rows"] += rows_a
         agent["note"] += (f"{a['agent']}: {a['modes']['none']['attack_success']['n']} InjecAgent attack cases "
-                          f"(enhanced setting, half direct-harm, half data-stealing) and "
+                          f"(30 each of direct-harm/data-stealing x base/enhanced) and "
                           f"{a['modes']['none']['utility_benign']['n']} benign tool outputs. ")
 
     onnx = os.path.join(RESULTS, "onnx_parity.json")
@@ -239,7 +241,8 @@ def main():
     open(os.path.join(RESULTS, "tables.md"), "w").write("\n".join(md) + "\n")
     stats = json.load(open(os.path.join(RESULTS, "corpus_stats.json")))
     n_train = stats.get("train", {}).get("n", 0)
-    n_synth = sum(v["sources"].get("synth", 0) for v in stats.values())
+    n_synth = sum(v["sources"].get("synth", 0) for v in stats.values()) // 2
+    n_hard = sum(v["sources"].get("synth_hardneg", 0) for v in stats.values())
     headline = []
     main_lab = next((l for l in table if l.startswith("DistilRoBERTa, +")), None)
     pub_lab = next((l for l in table if "public data only" in l), None)
@@ -254,16 +257,28 @@ def main():
                          "k": "recall on InjecAgent (never trained on)"})
     if agent:
         a0 = json.load(open(sorted(glob.glob(os.path.join(RESULTS, "agent", "summary_*.json")))[0]))
-        headline.append({"v": f"{pct(a0['modes']['none']['attack_success']['rate'])}% → "
-                              f"{pct(a0['modes']['redact']['attack_success']['rate'])}%",
-                         "k": f"agent attack success, no shield → redact mode ({a0['agent']})"})
-    site = {"setup": f"Training set {n_train:,} documents; {n_synth:,} synthetic documents across all splits "
-                     f"(paired clean/injected). Thresholds are fixed before looking at test data.",
+        headline.append({"v": f"{pct(a0['modes']['redact']['utility_under_attack']['rate'])}% vs "
+                              f"{pct(a0['modes']['block']['utility_under_attack']['rate'])}%",
+                         "k": "agent utility under attack: in-context redaction vs blocking the whole tool output "
+                              f"(attack success {pct(a0['modes']['none']['attack_success']['rate'])}% → "
+                              f"{pct(a0['modes']['redact']['attack_success']['rate'])}%)"})
+    site = {"setup": f"Training set {n_train:,} documents. Synthetic data: {n_synth:,} injected tool outputs, each "
+                     f"paired with its clean original, plus {n_hard:,} benign hard negatives. Thresholds are fixed on "
+                     f"the validation split before looking at test data. DistilRoBERTa: mean of 2 seeds.",
             "headline": headline,
             "recall_cols": [{"key": s, "label": SPLIT_LABELS[s]} for s in RECALL_SPLITS],
             "fpr_cols": [{"key": s, "label": SPLIT_LABELS[s]} for s in FPR_SPLITS],
             "detectors": site_det, "figures": figs, "agent": agent}
-    json.dump(site, open(os.path.join(SITE, "results.json"), "w"), indent=1)
+    def clean(x):  # browsers reject NaN in JSON
+        if isinstance(x, float) and x != x:
+            return None
+        if isinstance(x, dict):
+            return {k: clean(v) for k, v in x.items()}
+        if isinstance(x, list):
+            return [clean(v) for v in x]
+        return x
+
+    json.dump(clean(site), open(os.path.join(SITE, "results.json"), "w"), indent=1, allow_nan=False)
     print("\n".join(md))
 
 

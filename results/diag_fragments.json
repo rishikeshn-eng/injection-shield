@@ -1,0 +1,17 @@
+{
+ "onnx": {
+  "threshold": 0.1251160518655777,
+  "n": 3000,
+  "flag_rate_all": 0.29933333333333334,
+  "flag_rate_tokens_0_8": 0.7111517367458866,
+  "n_tokens_0_8": 547,
+  "flag_rate_tokens_8_16": 0.25390625,
+  "n_tokens_8_16": 1024,
+  "flag_rate_tokens_16_32": 0.16828478964401294,
+  "n_tokens_16_32": 1236,
+  "flag_rate_tokens_32_64": 0.20634920634920634,
+  "n_tokens_32_64": 189,
+  "flag_rate_tokens_64_1000000": 0.5,
+  "n_tokens_64_1000000": 4
+ }
+}

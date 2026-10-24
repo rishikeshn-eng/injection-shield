@@ -12,3 +12,204 @@ test_promptshield          n=160 failed=0 auroc=0.861 R=0.725 FPR=0.000
 [gemini gemma-4-31b-it] 429 hint b'57.45333136': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
 [gemini gemma-4-31b-it] 429 hint b'54.926825574': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
 [gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] 429 hint b'51.605378324': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[judge test_synth_id] 20/20 275s
+test_synth_id              n=160 failed=0 auroc=1.000 R=0.988 FPR=0.000
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[judge test_synth_ood_style] 20/20 86s
+test_synth_ood_style       n=160 failed=0 auroc=0.963 R=0.925 FPR=0.000
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] 429 hint b'2.772179864': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'57.619614509': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] 429 hint b'2.76499084': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'57.999386037': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] 429 hint b'49.441113072': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] 429 hint b'13.960477256': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'57.302788327': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'57.538213429': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] 429 hint b'11.76289344': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'57.713499536': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'8.105694913': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'56.685168584': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'54.601427403': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'56.599748085': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] 429 hint b'56.896679147': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[judge test_synth_ood_carrier] 20/20 2146s
+test_synth_ood_carrier     n=160 failed=0 auroc=1.000 R=1.000 FPR=0.000
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] 429 hint b'2.984550344': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] 429 hint b'59.261834394': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[judge test_synth_ood_both] 20/20 2156s
+test_synth_ood_both        n=152 failed=8 auroc=0.974 R=0.923 FPR=0.000
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: TimeoutError('The read operation timed out')
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] 429 hint b'45.182523467': b'{\n  "error": {\n    "code": 429,\n    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 500: b'{\n  "error": {\n    "code": 500,\n    "message": "Internal error encountered.",\n    "status": "INTERNAL"\n  }\n}\n'
+[gemini gemma-4-31b-it] retry after: HTTP 503: b'{\n  "error": {\n    "code": 503,\n    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please 

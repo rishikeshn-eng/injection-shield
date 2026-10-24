@@ -174,7 +174,7 @@ load();
 
 // ---------- results ----------
 const fmt = (m, k) => m == null || m[k] == null || isNaN(m[k]) ? "–" : (100 * m[k]).toFixed(1);
-const ci = (c) => c && !isNaN(c[0]) ? ` <span class="muted">[${(100 * c[0]).toFixed(0)}–${(100 * c[1]).toFixed(0)}]</span>` : "";
+const ci = (c) => c && c[0] != null && !isNaN(c[0]) ? ` <span class="muted">[${(100 * c[0]).toFixed(0)}–${(100 * c[1]).toFixed(0)}]</span>` : "";
 function table(el, cols, rows) {
   el.innerHTML = "<tr>" + cols.map((c) => `<th>${c}</th>`).join("") + "</tr>" + rows.map((r) => "<tr>" + r.map((c) => `<td>${c}</td>`).join("") + "</tr>").join("");
 }
