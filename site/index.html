@@ -5,47 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Injection Shield</title>
 <meta name="description" content="A 33 MB in-browser classifier for indirect prompt injection in agent tool outputs, with evaluation on held-out attack styles, InjecAgent and AgentDojo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="lab.css">
 <style>
-:root{--bg:#fbfaf7;--fg:#1d1c1a;--muted:#6b6862;--card:#ffffff;--line:#e4e1da;--accent:#2f5bd3;--bad:#c4372b;--warn:#b7791f;--good:#2e7d4f;--hl:rgba(196,55,43,.18);--code:#f2f0eb}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161616;--fg:#ecebe8;--muted:#a3a09a;--card:#1f1f1f;--line:#333;--accent:#7f9cf5;--bad:#f07167;--warn:#e9b44c;--good:#6fcf97;--hl:rgba(240,113,103,.25);--code:#262626}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:980px;margin:0 auto;padding:32px 16px 80px}
-h1{font-size:2rem;margin:0 0 4px;letter-spacing:-.01em}
-h2{font-size:1.3rem;margin:44px 0 10px}
-p.lede{color:var(--muted);margin:0 0 20px;max-width:760px}
-a{color:var(--accent)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
-textarea{width:100%;min-height:190px;resize:vertical;font:13px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--code);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:10px}
-.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}
-button{font:inherit;font-size:14px;padding:7px 12px;border-radius:7px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
-button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-button:disabled{opacity:.5;cursor:default}
+:root{--fg:var(--ink);--card:var(--surface);--code:var(--surface-2);--acc:var(--link);--a2:var(--c1);--ok:var(--good);--warn:var(--accent);--hl:var(--bad-soft);}
+#headline .card{border:0;border-radius:0}
+#try{margin-top:24px}
 #status{color:var(--muted);font-size:14px}
-.meter{height:10px;background:var(--code);border-radius:5px;overflow:hidden;margin:6px 0 2px}
+.meter{height:8px;background:var(--surface-2);border-radius:4px;overflow:hidden;margin:10px 0 6px}
 .meter>div{height:100%;width:0;transition:width .3s}
-.verdict{font-weight:600;font-size:1.1rem}
-#segs{white-space:pre-wrap;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--code);border-radius:8px;padding:10px;margin-top:10px;overflow-wrap:anywhere}
+.verdict{font:700 22px/1.2 var(--display);letter-spacing:-.02em}
+#segs{white-space:pre-wrap;font:13px/1.55 var(--mono);background:var(--surface-2);border-radius:10px;padding:12px 14px;margin-top:12px;overflow-wrap:anywhere}
 #segs span.flag{background:var(--hl);border-bottom:2px solid var(--bad)}
-table{border-collapse:collapse;width:100%;font-size:14px}
-th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
-th:first-child,td:first-child{text-align:left}
-th{color:var(--muted);font-weight:600}
-.scroll{overflow-x:auto}
-.muted{color:var(--muted);font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-.stat .v{font-size:1.6rem;font-weight:650}
-.stat .k{color:var(--muted);font-size:13px}
-img.fig{width:100%;border-radius:8px;border:1px solid var(--line);background:#fff}
-code{background:var(--code);padding:1px 4px;border-radius:4px;font-size:.92em}
+.row button:not(.primary){font-size:14px}
 </style>
 </head>
 <body>
+<header class="labbar"><div class="labbar-in"><a class="home" href="https://claude.ai/artifact/HFzmFTYLBw6n7KTCFKAdSQ"><i></i>Rishikesh · AI safety</a><nav aria-label="Sections"><a href="#try">Try it</a><a href="#results">Results</a><a class="gh" href="https://github.com/rishikeshn-eng/injection-shield">GitHub ↗</a></nav></div></header>
 <main>
+<div class="eyebrow">Agent security · prompt injection</div>
 <h1>Injection Shield</h1>
 <p class="lede">A small classifier that flags <b>indirect prompt injection</b>: instructions hidden in web pages, emails, API responses, code and agent memory that try to hijack an AI agent. It runs entirely in your browser (quantised ONNX, <span id="modelsize">~33 MB</span>), so nothing you paste leaves the page. <a href="https://github.com/rishikeshn-eng/injection-shield">Code, data recipe and full results on GitHub.</a></p>
 
-<div class="card">
+<div class="card" id="try">
   <textarea id="inp" spellcheck="false" placeholder="Paste a tool output, email, web page or prompt..."></textarea>
   <div class="row">
     <button class="primary" id="go" disabled>Score</button>
@@ -63,7 +45,7 @@ code{background:var(--code);padding:1px 4px;border-radius:4px;font-size:.92em}
   </div>
 </div>
 
-<h2>Results</h2>
+<h2 id="results">Results</h2>
 <div id="headline" class="grid"></div>
 <p class="muted" id="setup"></p>
 <h3>Detection: recall at a fixed 1% false-positive budget (threshold calibrated on validation)</h3>
@@ -103,6 +85,7 @@ async function load() {
     model = await AutoModelForSequenceClassification.from_pretrained("injection-shield", { dtype: "q8" });
     $("status").textContent = "Model ready (" + meta.base + ", int8).";
     $("go").disabled = false;
+    if (!$("inp").value.trim()) { $("inp").value = EXAMPLES[1]; score(); }
   } catch (e) { $("status").textContent = "Model failed to load: " + e; console.error(e); }
 }
 
