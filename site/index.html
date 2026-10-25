@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Injection Shield</title>
 <meta name="description" content="A 33 MB in-browser classifier for indirect prompt injection in agent tool outputs, with evaluation on held-out attack styles, InjecAgent and AgentDojo.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="lab.css">
 <style>
-:root{--fg:var(--ink);--card:var(--surface);--code:var(--surface-2);--acc:var(--link);--a2:var(--c1);--ok:var(--good);--warn:var(--accent);--hl:var(--bad-soft);}
+:root{--accent:var(--dye);--accent-soft:var(--dye-soft);--fg:var(--ink);--card:var(--surface);--code:var(--surface-2);--acc:var(--link);--a2:var(--c1);--ok:var(--good);--warn:var(--accent);--hl:var(--bad-soft);--dye:#B0234A;--dye-dark:#FF8FAD;}
 #headline .card{border:0;border-radius:0}
 #try{margin-top:24px}
 #status{color:var(--muted);font-size:14px}
@@ -21,8 +21,9 @@
 </style>
 </head>
 <body>
-<header class="labbar"><div class="labbar-in"><a class="home" href="https://claude.ai/artifact/HFzmFTYLBw6n7KTCFKAdSQ"><i></i>Rishikesh · AI safety</a><nav aria-label="Sections"><a href="#try">Try it</a><a href="#results">Results</a><a class="gh" href="https://github.com/rishikeshn-eng/injection-shield">GitHub ↗</a></nav></div></header>
+<header class="labbar"><div class="labbar-in"><a class="home" href="https://claude.ai/artifact/HFzmFTYLBw6n7KTCFKAdSQ"><i>律</i>Rishikesh Nair</a><nav aria-label="Sections"><a class="ex" href="#explore">Explore</a><a href="#try">Try it</a><a href="#results">Results</a><a class="gh" href="https://github.com/rishikeshn-eng/injection-shield">GitHub ↗</a></nav></div></header>
 <main>
+<div class="seal" aria-hidden="true">盾<small>tate · shield</small></div>
 <div class="eyebrow">Agent security · prompt injection</div>
 <h1>Injection Shield</h1>
 <p class="lede">A small classifier that flags <b>indirect prompt injection</b>: instructions hidden in web pages, emails, API responses, code and agent memory that try to hijack an AI agent. It runs entirely in your browser (quantised ONNX, <span id="modelsize">~33 MB</span>), so nothing you paste leaves the page. <a href="https://github.com/rishikeshn-eng/injection-shield">Code, data recipe and full results on GitHub.</a></p>
@@ -44,6 +45,26 @@
     <div id="segs"></div>
   </div>
 </div>
+
+<section class="lab-panel" id="explore" aria-labelledby="explore-h">
+  <div class="ph"><h2 id="explore-h">Who still catches the attack off-distribution?</h2><span class="eyebrow">Explore</span></div>
+  <p class="how">Every detector runs at the same operating point: the threshold that flags 1% of clean validation documents. Pick a test set and see who keeps up. The further a set is from the training data, the bigger the gap.</p>
+  <div class="pctl"><span class="lbl">Test set</span><div class="seg" id="ss" role="group" aria-label="Test set"></div></div>
+  <p class="readout" id="sread" aria-live="polite"></p>
+  <div id="sbars"></div>
+  <p class="muted" id="snote" style="margin-top:10px"></p>
+</section>
+<script>
+(()=>{let R,k="test_synth_ood_style";const $=i=>document.getElementById(i);
+const seg=(el,items,cur,on)=>{el.innerHTML=items.map(([x,l])=>`<button type="button" data-k="${x}" aria-pressed="${x===cur}">${l}</button>`).join("");el.onclick=e=>{const b=e.target.closest("button");if(!b)return;el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));on(b.dataset.k)}};
+const short=l=>l.replace(" deberta-v3-base-injection-v2 (184M)","").replace(" (Gemma-4-31B via Gemini API)*"," (Gemma-4-31B)").replace(", + synthetic (ours) (2 seeds)"," + synthetic (ours)").replace(", + synthetic (ours, browser model)"," + synthetic (browser)").replace(", public data only"," (public data)");
+function draw(){const rows=R.detectors.map(d=>[d.label,d.splits[k]]).filter(r=>r[1]&&r[1].recall!=null).sort((a,b)=>b[1].recall-a[1].recall);
+  $("sbars").innerHTML=rows.map(([l,m])=>{const mine=/ours/.test(l),ci=m.recall_ci;return `<div class="mrow${mine?" mine":""}"><span class="lab" title="${l}">${short(l)}</span><div class="track"><div class="fill${mine?"":" alt"}" style="width:${100*m.recall}%"></div>${ci&&ci[0]!=null?`<div class="ci" style="left:${100*ci[0]}%;width:${100*(ci[1]-ci[0])}%"></div>`:""}</div><span class="val">${(100*m.recall).toFixed(1)}%</span></div>`}).join("");
+  const ours=rows.find(r=>/browser/.test(r[0])),pa=rows.find(r=>/ProtectAI/.test(r[0]));const lbl=R.recall_cols.find(c=>c.key===k).label;
+  $("sread").innerHTML=ours&&pa?`On <em>${lbl}</em>, the 32 MB browser model catches <em>${(100*ours[1].recall).toFixed(0)}%</em>; ProtectAI catches ${(100*pa[1].recall).toFixed(0)}%.`:lbl;
+  $("snote").textContent="Recall at 1% validation false-positive rate, 95% bootstrap intervals. Coloured bars are this project's models. The LLM judge has no score on the external agent sets."}
+fetch("results.json").then(r=>r.json()).then(d=>{R=d;seg($("ss"),d.recall_cols.map(c=>[c.key,c.label]),k,x=>{k=x;draw()});draw()})})();
+</script>
 
 <h2 id="results">Results</h2>
 <div id="headline" class="grid"></div>
