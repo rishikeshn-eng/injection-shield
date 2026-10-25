@@ -19,6 +19,30 @@
 #segs span.flag{background:var(--hl);border-bottom:2px solid var(--bad)}
 .row button:not(.primary){font-size:14px}
 </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&display=swap">
+<style id="theme">
+:root:root:root{--bg:#1630D6;--surface:#2140E3;--surface-2:#2D4BEA;--ink:#FFFFFF;--ink-2:#E6E9FF;--muted:#D4DAFF;--line:rgba(255,255,255,.18);--line-2:rgba(255,255,255,.32);--dye:#FFE14D;--dye-dark:#FFE14D;--on-dye:#1630D6;--dye-soft:rgba(255,225,77,.18);--link:#FFE14D;--blk:#FFFFFF;--blk-ink:#1630D6;--c1:#FFE14D;--c2:#FFFFFF;--c3:#7EF0C8;--c4:#FF9A8A;--c5:#C9D2FF;--c6:#D4DAFF;--good:#7EF0C8;--bad:#FFB3A8;--warn:#FFE14D;--hl:rgba(255,225,77,.35);--display:'Big Shoulders Display',system-ui,sans-serif;--h1-ls:.005em;--h1-w:900;--plate-filter:none;--tex:radial-gradient(rgba(255,255,255,.16) 1.1px,transparent 1.6px) 0 0/18px 18px;--grain:.1;--color-scheme:dark;}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--tex);opacity:var(--tex-o,1)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:220px;opacity:var(--grain,.08);mix-blend-mode:overlay}
+.labbar{background:var(--blk);border-bottom:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+.labbar .home,.labbar nav a,.labbar nav a.gh{color:var(--blk-ink)}
+.labbar nav a:hover{background:color-mix(in srgb,var(--blk-ink) 14%,transparent);color:var(--blk-ink)}
+.labbar .home i{background:var(--blk-ink);color:var(--blk)}
+h1,h2,h3,.readout,.verdict,.kpi b,.stat b,.tile .v,.stat .v{font-family:var(--display)}
+h1{font-size:clamp(38px,6.2vw,72px);line-height:1.02;letter-spacing:var(--h1-ls,-.02em);font-weight:var(--h1-w,800);max-width:18ch}
+.seal{background:var(--dye);color:var(--on-dye);border-color:var(--dye);box-shadow:6px 6px 0 var(--ink)}
+.kpis,.stats,.tiles,#headline.grid{background:var(--blk);border:0;gap:0;border-radius:var(--r);box-shadow:8px 8px 0 var(--ink)}
+.kpi,.stat,.tile,#headline .stat{background:transparent;border-left:1px solid color-mix(in srgb,var(--blk-ink) 22%,transparent)}
+.kpi b,.stat b,.tile .v,.stat .v,.kpi:first-child b,.stat:first-child b,.tile:first-child .v,#headline .stat:first-child .v{color:var(--blk-ink)}
+.kpi span,.stat span,.tile .l,.stat .k{color:color-mix(in srgb,var(--blk-ink) 85%,transparent)}
+.lab-panel{border:2px solid var(--ink);border-top:10px solid var(--dye);box-shadow:8px 8px 0 var(--ink)}
+.seg{background:color-mix(in srgb,var(--ink) 9%,transparent)}
+.seg button[aria-pressed="true"]{background:var(--dye);color:var(--on-dye);box-shadow:none}
+.track{background:color-mix(in srgb,var(--ink) 12%,transparent)}
+.card,.panel,.case,.tbl,.tablewrap,figure{border-color:color-mix(in srgb,var(--ink) 22%,transparent)}
+button.primary{box-shadow:4px 4px 0 var(--ink)}
+h1{font-size:clamp(56px,10vw,120px);text-transform:uppercase;line-height:.9}h2{text-transform:uppercase;letter-spacing:.01em}#segs span.flag{background:rgba(255,225,77,.35);border-bottom-color:#FFE14D}
+</style>
 </head>
 <body>
 <header class="labbar"><div class="labbar-in"><a class="home" href="https://claude.ai/artifact/HFzmFTYLBw6n7KTCFKAdSQ"><i>律</i>Rishikesh Nair</a><nav aria-label="Sections"><a class="ex" href="#explore">Explore</a><a href="#try">Try it</a><a href="#results">Results</a><a class="gh" href="https://github.com/rishikeshn-eng/injection-shield">GitHub ↗</a></nav></div></header>
